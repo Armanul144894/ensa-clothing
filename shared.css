@@ -114,9 +114,9 @@ body {
 #mainNav.transparent .nav-link {
   color: rgba(255, 255, 255, 0.85);
 }
-#mainNav.transparent .nav-link::after {
+/* #mainNav.transparent .nav-link::after {
   background: rgba(255, 255, 255, 0.7);
-}
+} */
 #mainNav.transparent .nav-link:hover {
   color: #fff;
 }
