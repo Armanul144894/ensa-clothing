@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sustainability — ENSA Clothing Ltd.</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/ensa-logo.png" />
+    <link rel="shortcut icon" href="images/ensa-logo.png" />
+    <link rel="apple-touch-icon" href="images/ensa-logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="mainNav">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="nav-logo" href="index.html"
+          ><img
+            src="images/ensa-logo.png"
+            alt="ENSA Clothing Ltd."
+            class="nav-logo-img"
+        /></a>
+        <div class="d-none d-lg-flex align-items-center gap-1">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="products.html">Products</a>
+          <a class="nav-link active" href="sustainability.html"
+            >Sustainability</a
+          >
+          <a class="nav-link" href="social-activities.html"
+            >Social Activities</a
+          >
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-cta ms-3" href="contact.html">Get a Quote</a>
+        </div>
+        <button
+          class="mob-toggle d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobNav"
+        >
+          <i class="bi bi-list fs-5"></i>
+        </button>
+      </div>
+      <div
+        class="collapse"
+        id="mobNav"
+        style="
+          background: rgba(255, 255, 255, 0.98);
+          border-top: 1px solid var(--border);
+        "
+      >
+        <div class="container py-3 d-flex flex-column gap-2">
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="index.html"
+            onclick="closeMob()"
+            >Home</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="about.html"
+            onclick="closeMob()"
+            >About</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="products.html"
+            onclick="closeMob()"
+            >Products</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="sustainability.html"
+            onclick="closeMob()"
+            >Sustainability</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="social-activities.html"
+            onclick="closeMob()"
+            >Social Activities</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="contact.html"
+            onclick="closeMob()"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div
+        class="page-hero-bg"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600&auto=format&fit=crop&quot;);
+        "
+      ></div>
+      <div class="container page-hero-inner">
+        <div class="breadcrumb-wrap">
+          <a href="index.html">Home</a><span class="sep">/</span
+          ><span class="cur">Sustainability</span>
+        </div>
+        <h1 class="page-hero-title">
+          Our <em>Sustainability</em><br />Commitment
+        </h1>
+        <p class="page-hero-sub">
+          A bold vision for trade that delivers social, environmental, and
+          economic benefits for everyone — backed by the world's leading
+          certifications.
+        </p>
+      </div>
+    </div>
+
+    <!-- VISION BANNER -->
+    <div class="vision-wrap">
+      <div class="container vision-inner">
+        <p class="vision-quote">
+          We want to create a world where all trade delivers
+          <em>social, environmental</em> and <em>economic benefits</em> for
+          everyone.
+        </p>
+        <p class="vision-sub">
+          This is our vision — a bold ambition that has propelled us to reshape
+          our organisation so it is fit for the future and fit for purpose.
+          Vision 2030 is the strategy that will help us get there.
+        </p>
+      </div>
+    </div>
+
+    <!-- AMFORI / ECOVADIS INTRO -->
+    <section style="background: #fff">
+      <div class="container">
+        <div class="row g-5 align-items-center mb-5">
+          <div class="col-lg-6 reveal">
+            <div class="eyebrow">Trade &amp; Social Compliance</div>
+            <h2 class="s-title">amfori <em>BSCI</em></h2>
+            <div class="navy-bar"></div>
+            <p class="s-desc mb-4">
+              amfori BSCI is a leading business-driven initiative for companies
+              committed to improving working conditions in global supply chains.
+              ENSA and our partner factories are fully aligned with the amfori
+              vision: trade that benefits people and the planet.
+            </p>
+            <p class="s-desc">
+              As an amfori member, we participate in regular social audits and
+              continuous improvement cycles — ensuring every factory in our
+              network upholds human rights, fair wages, and safe working
+              conditions.
+            </p>
+            <div class="abt-certs mt-4">
+              <span class="cert-chip">Social Compliance</span>
+              <span class="cert-chip">Supply Chain Audit</span>
+              <span class="cert-chip">Vision 2030</span>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal" style="transition-delay: 0.14s">
+            <div class="card border-0 text-center bg-white shadow">
+              <div class="card-body">
+                <img
+                  src="images/sustainability/Amfori-Logo-1.jpg"
+                  class="img-fluid"
+                  alt="Sustainability"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 order-lg-2 reveal">
+            <div class="eyebrow">CSR Assessment</div>
+            <h2 class="s-title">EcoVadis <em>Sustainability</em></h2>
+            <div class="navy-bar"></div>
+            <p class="s-desc mb-4">
+              The EcoVadis sustainability assessment methodology is the heart of
+              our Ratings and Scorecards. It evaluates how well a company has
+              integrated the principles of Sustainability and CSR into their
+              business and management system.
+            </p>
+            <p class="s-desc mb-3">
+              It is based on <strong>seven founding principles</strong> —
+              covering environment, labour practices, fair business ethics, and
+              sustainable procurement across the entire supply chain.
+            </p>
+            <div class="pillar-grid mt-3">
+              <div class="pillar">
+                <div class="pillar-icon"><i class="bi bi-tree-fill"></i></div>
+                <div class="pillar-lbl">Environment</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="bi bi-people-fill"></i></div>
+                <div class="pillar-lbl">Labour &amp; Rights</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <div class="pillar-lbl">Ethics &amp; Integrity</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="bi bi-globe2"></i></div>
+                <div class="pillar-lbl">Sustainable Procurement</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="bi bi-recycle"></i></div>
+                <div class="pillar-lbl">Circular Economy</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <i class="bi bi-bar-chart-fill"></i>
+                </div>
+                <div class="pillar-lbl">Continuous Improvement</div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-6 order-lg-1 reveal h-100"
+            style="transition-delay: 0.14s"
+          >
+            <div class="card border-0 text-center bg-white shadow">
+              <div class="card-body">
+                <img
+                  src="images/sustainability/Ecovad-is-log.jpg"
+                  class="img-fluid"
+                  alt="Sustainability"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERT GRID -->
+    <section style="background: var(--bg-alt)">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-7 reveal">
+            <div class="eyebrow">Our Certifications</div>
+            <h2 class="s-title">Standards We <em>Uphold</em></h2>
+            <p class="s-desc">
+              Every certification ENSA holds reflects a tangible commitment to
+              people, planet, and product quality. Together they give our buyers
+              complete confidence in their sourcing partner.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- ZDHC -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.04s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/ZDHC.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  ZDHC — Zero Discharge of Hazardous Chemicals
+                </div>
+              </div>
+              <p class="cert-block-text">
+                Friends of ZDHC gain deeper visibility over their supply chain.
+                ENSA participates in ZDHC's Chemical Module and Wastewater
+                Module, using gateway solutions to actively engage suppliers and
+                evaluate performance.
+              </p>
+              <ul class="zdhc-list">
+                <li>
+                  <span class="zdhc-text"
+                    >Access to ZDHC Gateway — Chemical &amp; Wastewater
+                    Modules</span
+                  >
+                </li>
+                <li>
+                  <span class="zdhc-text"
+                    >Gateway Solutions including templates and supplier
+                    guidance</span
+                  >
+                </li>
+                <li>
+                  <span class="zdhc-text"
+                    >Input into ZDHC Gateway development roadmap</span
+                  >
+                </li>
+                <li>
+                  <span class="zdhc-text"
+                    >Supplier performance evaluation via ZDHC Solutions</span
+                  >
+                </li>
+              </ul>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Zero Hazard Commitment</span
+              >
+            </div>
+          </div>
+
+          <!-- GOTS -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.08s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/GOAT-1.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  GOTS — Global Organic Textile Standard
+                </div>
+              </div>
+              <p class="cert-block-text">
+                Developed by leading standard-setters to define worldwide
+                recognised requirements for organic textiles. From the
+                harvesting of raw materials to environmentally and socially
+                responsible manufacturing and labelling — GOTS certified
+                textiles provide credible assurance to the consumer.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Organic Textile Assurance</span
+              >
+            </div>
+          </div>
+
+          <!-- GRS -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.12s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/GRS.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">GRS — Global Recycle Standard</div>
+              </div>
+              <p class="cert-block-text">
+                Originally developed by Control Union Certifications in 2008 and
+                transferred to Textile Exchange in 2011. The GRS is an
+                international voluntary full product standard setting
+                requirements for third-party certification of recycled content,
+                chain of custody, social and environmental practices, and
+                chemical restrictions.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Recycled Content Verified</span
+              >
+            </div>
+          </div>
+
+          <!-- IAF / ILAC -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.16s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/ISO-2.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">IAF &amp; ILAC Accreditation</div>
+              </div>
+              <p class="cert-block-text">
+                The IAF is the world association of Conformity Assessment
+                Accreditation Bodies covering management systems, products,
+                services and personnel. ILAC is the international accreditation
+                body for calibration, testing, and inspection bodies operating
+                in accordance with ISO/IEC 17011 and 17025.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>International Accreditation</span
+              >
+            </div>
+          </div>
+
+          <!-- OEKO-TEX -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.2s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/Oek-tex.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">OEKO-TEX® Standard 100</div>
+              </div>
+              <p class="cert-block-text">
+                Since 1992, OEKO-TEX® has offered practical, tailored solutions
+                for product stewardship and consumer protection. Their modular
+                system ensures traceability, transparency and cost reduction
+                along the textile and leather supply chains — providing tools
+                for safety and sustainability management.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Consumer Safety Certified</span
+              >
+            </div>
+          </div>
+
+          <!-- Sedex -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.24s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/Sedex.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  Sedex — Ethical Trade Membership
+                </div>
+              </div>
+              <p class="cert-block-text">
+                Sedex is one of the world's leading ethical trade membership
+                organisations. Working with businesses to improve working
+                conditions in global supply chains, Sedex provides an online
+                platform, tools and services to help businesses operate
+                responsibly, protect workers, and source ethically.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Ethical Supply Chain</span
+              >
+            </div>
+          </div>
+
+          <!-- WRAP -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.28s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/WRAP-ensa.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  WRAP — Worldwide Responsible Accredited Production
+                </div>
+              </div>
+              <p class="cert-block-text">
+                WRAP promotes safe, lawful, humane and ethical manufacturing
+                around the world. It certifies factories according to twelve
+                Worldwide Responsible Apparel Production Principles covering
+                compliance, safety, worker rights, environmental practices, and
+                community responsibility.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>12 Production Principles</span
+              >
+            </div>
+          </div>
+
+          <!-- Accord -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.32s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/ACCORD.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  Accord on Fire &amp; Building Safety
+                </div>
+              </div>
+              <p class="cert-block-text">
+                Signed on 24 April 2013, the Accord is a five-year independent,
+                legally binding Global Framework Agreement between global
+                brands, retailers and trade unions. It was designed to build a
+                safe and healthy Bangladeshi Ready Made Garment industry, and
+                ENSA partner factories are fully compliant.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Factory Safety Verified</span
+              >
+            </div>
+          </div>
+
+          <!-- CMIA / BCI -->
+          <div class="col-md-6 col-xl-4 reveal" style="transition-delay: 0.36s">
+            <div class="cert-block">
+              <div>
+                <div
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    background: var(--white);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                    margin-bottom: 14px;
+                  "
+                  class="shadow rounded p-2"
+                >
+                  <img
+                    src="images/sustainability/CMIA.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="cert-block-name">
+                  CMIA &amp; BCI — Better Cotton
+                </div>
+              </div>
+              <p class="cert-block-text">
+                Cotton made in Africa (CMIA) promotes strict environmental,
+                economic and social sustainability criteria. The Better Cotton
+                Initiative (BCI) is a non-profit multistakeholder group
+                improving cotton farming standards across 21 countries. As of
+                2017, Better Cotton accounts for 14% of global cotton
+                production.
+              </p>
+              <span class="cert-block-chip"
+                ><i class="bi bi-check-lg"></i>Sustainable Cotton Sourcing</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIDENCE STRIP -->
+    <div class="conf-strip">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8 reveal">
+            <p class="conf-text">
+              The certifications we have attained for our supply base, products
+              and practices give you the confidence that your brand is sourcing
+              using the best partners and techniques.
+            </p>
+            <p class="conf-sub">
+              Every standard we uphold is a promise to our buyers, our workers,
+              and our planet — backed by independent third-party verification.
+            </p>
+          </div>
+          <div
+            class="col-lg-4 text-lg-end reveal"
+            style="transition-delay: 0.1s"
+          >
+            <a href="contact.html" class="btn-navy">Work With Us</a>
+            <a href="products.html" class="btn-outline ms-3">Our Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="ft-logo-wrap">
+              <img
+                src="images/ensa-logo.png"
+                alt="ENSA Clothing Ltd."
+                class="ft-logo-img"
+              />
+            </div>
+            <p class="ft-desc">
+              ENSA Clothing Ltd. is a global apparel, home textile, handicrafts
+              sourcing agent in Dhaka, Bangladesh. It was established in the
+              year 2015 by a team of well experienced manufacturing
+              professionals.
+            </p>
+            <div class="socials mt-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=100014330675359"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCe3RyMQEYjXNzWHryTt87pA"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ensa-clothing-9048b7250/"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://twitter.com/EnsaClothing"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <div class="ft-hd">Navigate</div>
+            <a href="index.html" class="ft-lnk">Home</a>
+            <a href="about.html" class="ft-lnk">About Us</a>
+            <a href="products.html" class="ft-lnk">Products</a>
+            <a href="sustainability.html" class="ft-lnk">Sustainability</a>
+            <a href="social-activities.html" class="ft-lnk"
+              >Social Activities</a
+            >
+            <a href="contact.html" class="ft-lnk">Contact</a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ft-hd">Categories</div>
+            <a href="products.html?cat=knit" class="ft-lnk">Knit Garments</a>
+            <a href="products.html?cat=woven" class="ft-lnk">Woven Apparel</a>
+            <a href="products.html?cat=sweater" class="ft-lnk">Sweaters</a>
+            <a href="products.html?cat=handicraft" class="ft-lnk"
+              >Handicraft &amp; Home Textile</a
+            >
+            <a href="products.html?cat=activewear" class="ft-lnk">Activewear</a>
+            <a href="products.html?cat=lingerie" class="ft-lnk"
+              >Lingerie &amp; Nightwear</a
+            >
+          </div>
+          <div class="col-lg-3">
+            <div class="ft-hd">Certifications</div>
+            <span class="ft-lnk">Accord &amp; Alliance</span>
+            <span class="ft-lnk">ISO 9001</span>
+            <span class="ft-lnk">WRAP &amp; BSCI</span>
+            <span class="ft-lnk">OCS &amp; Oeko-Tex</span>
+            <div class="ft-hd mt-4">Contact</div>
+            <a href="mailto:info@ensaclothing.com" class="ft-lnk"
+              ><span
+                class="__cf_email__"
+                data-cfemail="6f060109002f0a011c0e0c03001b07060108410c0002"
+                >info@ensaclothing.com</span
+              ></a
+            >
+            <a href="mailto:enamul@ensaclothing.com" class="ft-lnk"
+              ><span
+                class="__cf_email__"
+                data-cfemail="f4919a95998198b4919a879597989b809c9d9a93da979b99"
+                >enamul@ensaclothing.com</span
+              ></a
+            >
+            <span class="ft-lnk">+880 9610 304 050</span>
+          </div>
+        </div>
+        <div class="ft-bottom">
+          <div class="ft-copy">
+            © 2026 ENSA Clothing Ltd. All Rights Reserved. Dhaka, Bangladesh.
+          </div>
+          <div class="ft-copy">
+            Est. 2015 · Global Apparel Sourcing Excellence
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shared.js"></script>
+  </body>
+</html>

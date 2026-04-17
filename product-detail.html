@@ -1,0 +1,3718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Product Detail — ENSA Clothing Ltd.</title>
+    <link rel="icon" type="image/png" href="images/ensa-logo.png" />
+    <link rel="shortcut icon" href="images/ensa-logo.png" />
+    <link rel="apple-touch-icon" href="images/ensa-logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="mainNav">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="nav-logo" href="index.html">
+          <img
+            src="images/ensa-logo.png"
+            alt="ENSA Clothing Ltd."
+            class="nav-logo-img"
+          />
+        </a>
+        <div class="d-none d-lg-flex align-items-center gap-1">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active" href="products.html">Products</a>
+          <a class="nav-link" href="sustainability.html">Sustainability</a>
+          <a class="nav-link" href="social-activities.html"
+            >Social Activities</a
+          >
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-cta ms-3" href="contact.html">Get a Quote</a>
+        </div>
+        <button
+          class="mob-toggle d-lg-none"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobNav"
+        >
+          <i class="bi bi-list fs-5"></i>
+        </button>
+      </div>
+      <div
+        class="collapse"
+        id="mobNav"
+        style="
+          background: rgba(255, 255, 255, 0.98);
+          border-top: 1px solid var(--border);
+        "
+      >
+        <div class="container py-3 d-flex flex-column gap-2">
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="index.html"
+            onclick="closeMob()"
+            >Home</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="about.html"
+            onclick="closeMob()"
+            >About</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="products.html"
+            onclick="closeMob()"
+            >Products</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="sustainability.html"
+            onclick="closeMob()"
+            >Sustainability</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="social-activities.html"
+            onclick="closeMob()"
+            >Social Activities</a
+          >
+          <a
+            class="nav-link"
+            style="color: var(--text)"
+            href="contact.html"
+            onclick="closeMob()"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- BREADCRUMB BAR -->
+    <div class="det-bar">
+      <div class="container">
+        <div class="det-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <a href="products.html">Products</a>
+          <span class="sep">/</span>
+          <span class="cur" id="bcCat">—</span>
+          <span class="sep">/</span>
+          <span class="cur" id="bcName">—</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section id="detailSection" style="background: #fff; padding: 56px 0 90px">
+      <div class="container">
+        <div class="row g-5" id="detailRow">
+          <!-- injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED FROM SAME CATEGORY -->
+    <section style="background: var(--bg-alt); padding: 80px 0 90px">
+      <div class="container">
+        <div class="row mb-4 align-items-end">
+          <div class="col">
+            <div class="eyebrow">More Like This</div>
+            <h2 class="s-title">
+              More from <em id="relCatLabel">this category</em>
+            </h2>
+          </div>
+          <div class="col-auto">
+            <a href="products.html" class="btn-outline">View All Products</a>
+          </div>
+        </div>
+        <div class="row g-4" id="relatedGrid"></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="ft-logo-wrap">
+              <img
+                src="images/ensa-logo.png"
+                alt="ENSA Clothing Ltd."
+                class="ft-logo-img"
+              />
+            </div>
+            <p class="ft-desc">
+              ENSA Clothing Ltd. is a global apparel, home textile, handicrafts
+              sourcing agent in Dhaka, Bangladesh. It was established in the
+              year 2015 by a team of well experienced manufacturing
+              professionals.
+            </p>
+            <div class="socials mt-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=100014330675359"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCe3RyMQEYjXNzWHryTt87pA"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ensa-clothing-9048b7250/"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://twitter.com/EnsaClothing"
+                class="soc"
+                target="_blank"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <div class="ft-hd">Navigate</div>
+            <a href="index.html" class="ft-lnk">Home</a>
+            <a href="about.html" class="ft-lnk">About Us</a>
+            <a href="products.html" class="ft-lnk">Products</a>
+            <a href="sustainability.html" class="ft-lnk">Sustainability</a>
+            <a href="social-activities.html" class="ft-lnk"
+              >Social Activities</a
+            >
+            <a href="contact.html" class="ft-lnk">Contact</a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ft-hd">Categories</div>
+            <a href="products.html?cat=knit" class="ft-lnk">Knit Garments</a>
+            <a href="products.html?cat=woven" class="ft-lnk">Woven Apparel</a>
+            <a href="products.html?cat=sweater" class="ft-lnk">Sweaters</a>
+            <a href="products.html?cat=handicraft" class="ft-lnk"
+              >Handicraft &amp; Home Textile</a
+            >
+            <a href="products.html?cat=activewear" class="ft-lnk">Activewear</a>
+            <a href="products.html?cat=lingerie" class="ft-lnk"
+              >Lingerie &amp; Nightwear</a
+            >
+          </div>
+          <div class="col-lg-3">
+            <div class="ft-hd">Certifications</div>
+            <span class="ft-lnk">Accord &amp; Alliance</span>
+            <span class="ft-lnk">ISO 9001</span>
+            <span class="ft-lnk">WRAP &amp; BSCI</span>
+            <span class="ft-lnk">OCS &amp; Oeko-Tex</span>
+            <div class="ft-hd mt-4">Contact</div>
+            <a
+              href="mailto:info@ensaclothing.com"
+              class="ft-lnk"
+              ><span
+                class="__cf_email__"
+                data-cfemail="6f060109002f0a011c0e0c03001b07060108410c0002"
+                >info@ensaclothing.com</span
+              ></a
+            >
+            <a
+              href="mailto:enamul@ensaclothing.com"
+              class="ft-lnk"
+              ><span
+                class="__cf_email__"
+                data-cfemail="f4919a95998198b4919a879597989b809c9d9a93da979b99"
+                >enamul@ensaclothing.com</span
+              ></a
+            >
+            <span class="ft-lnk">+880 9610 304 050</span>
+          </div>
+        </div>
+        <div class="ft-bottom">
+          <div class="ft-copy">
+            © 2026 ENSA Clothing Ltd. All Rights Reserved. Dhaka, Bangladesh.
+          </div>
+          <div class="ft-copy">
+            Est. 2015 · Global Apparel Sourcing Excellence
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shared.js"></script>
+    <script>
+      const PRODUCTS = [
+        {
+          id: "barbie-tshirt",
+          cat: "knit",
+          name: "Barbie T-Shirt",
+          sub: "Knit Garments",
+          badge: "Children's",
+          img: "images/products/1-74.jpg",
+          desc: "Color - Aurora pink. Round neck, short sleeves with stripe pattern.",
+          tags: ["100% Cotton", "Round Neck", "Short Sleeve", "Stripe"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "batman-tshirt",
+          cat: "knit",
+          name: "Batman T-Shirt",
+          sub: "Knit Garments",
+          badge: "Children's",
+          img: "images/products/1-78.jpg",
+          desc: "Color - Dark grey. Round neck, short sleeves.",
+          tags: ["60% Cotton", "40% Polyester", "Round Neck", "Short Sleeve"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "batman-trousers",
+          cat: "knit",
+          name: "Batman Trousers",
+          sub: "Knit Garments",
+          badge: null,
+          img: "images/products/2-57.jpg",
+          desc: "Three pockets with elasticated trim. Comfortable everyday knitwear bottoms.",
+          tags: ["58% Cotton", "40% Polyester", "2% Elastane", "Elasticated"],
+          cert: "BSCI · Accord · WRAP",
+        },
+        {
+          id: "sequin-top",
+          cat: "knit",
+          name: "Sequin Appliqué Top",
+          sub: "Knit Garments",
+          badge: "Children's",
+          img: "images/products/1-69.jpg",
+          desc: "Color - Violet. Round neck, long sleeves with sequin appliqué embellishment.",
+          tags: ["100% Cotton", "Round Neck", "Long Sleeve", "Sequin"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boxer-shorts-3",
+          cat: "knit",
+          name: "Boxer Shorts",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-170.jpg",
+          desc: "Multi-colour: available in black/navy/blue/green/red and anthracite grey and light grey melange compositions.",
+          tags: ["Multi-Colour", "Cotton Blend", "Jersey", "Underwear"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boxer-shorts-men",
+          cat: "knit",
+          name: "Boxer Shorts Men",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-173.jpg",
+          desc: "Perfect fit, 95% COTTON, 5% ELASTANE.",
+          tags: ["95% Cotton", "5% Elastane", "Perfect Fit", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boxer-shorts-men-2",
+          cat: "knit",
+          name: "Boxer Shorts Men",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-174.jpg",
+          desc: '3-pack, "Color": Blue/Gray, 95% COTTON, 5% ELASTANE.',
+          tags: ["95% Cotton", "3-Pack", "Blue/Gray", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boxer-shorts-men-3",
+          cat: "knit",
+          name: "Boxer Shorts Men",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-177.jpg",
+          desc: '3-pack, perfect fit, "Colour": Blue/Turquoise, 95% COTTON, 5% ELASTANE.',
+          tags: ["95% Cotton", "3-Pack", "Blue/Turquoise", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boys-pants",
+          cat: "knit",
+          name: "Boy's Pants",
+          sub: "Children's Knit",
+          badge: null,
+          img: "images/products/1-102.jpg",
+          desc: "Color - light grey, two pockets, jersey with loop fabric, 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Light Grey", "Two Pockets", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boys-shorts",
+          cat: "knit",
+          name: "Boy's Shorts",
+          sub: "Children's Knit",
+          badge: null,
+          img: "images/products/1-103.jpg",
+          desc: "Color - navy, two pockets, jersey with loop fabric, 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Navy", "Two Pockets", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "college-sweatshirt-dakota",
+          cat: "knit",
+          name: "College Sweatshirt Dakota",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-124.jpg",
+          desc: "Color - Navy, 86% COTTON, 13% POLYESTER, 1% ELASTANE.",
+          tags: ["86% Cotton", "Navy", "Sweatshirt", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "cotton-tshirt",
+          cat: "knit",
+          name: "Cotton T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-116.jpg",
+          desc: "Leopard print, Color - Beige, 95% COTTON, 5% ELASTANE.",
+          tags: ["95% Cotton", "Beige", "Leopard Print", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "cropped-sweatshirt-print",
+          cat: "knit",
+          name: "Cropped Sweatshirt with Print",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-122.jpg",
+          desc: "Color - Black, drawstring at hem, 50% COTTON, 50% POLYESTER.",
+          tags: ["50% Cotton", "Black", "Cropped", "Sweatshirt"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "cuffed-joggers",
+          cat: "knit",
+          name: "Cuffed Joggers",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-54.jpg",
+          desc: "Classic comfortable cuffed joggers, choice of leg fittings, 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Cuffed", "Joggers", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "cuffed-joggers-2",
+          cat: "knit",
+          name: "Cuffed Joggers",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-55.jpg",
+          desc: "Classic comfortable cuffed joggers, choice of leg fittings, 80% COTTON, 20% POLYESTER.",
+          tags: ["80% Cotton", "Cuffed", "Joggers", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "cycling-shorts",
+          cat: "knit",
+          name: "Cycling Shorts",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-143.jpg",
+          desc: "Color - Hunting Green, 92% POLYAMIDE, 8% ELASTANE.",
+          tags: ["92% Polyamide", "8% Elastane", "Hunting Green", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "disney-ls-tshirt",
+          cat: "knit",
+          name: "Disney Long Sleeve T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: null,
+          img: "images/products/1-77.jpg",
+          desc: "Color - Dusty Rose, round neck, snap fasteners, long sleeves, peplum hem, 100% COTTON.",
+          tags: ["100% Cotton", "Dusty Rose", "Long Sleeve", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "floral-hw-shorts",
+          cat: "knit",
+          name: "Floral High Waist Shorts",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-142.jpg",
+          desc: "Color - lavender, high waist, elasticated waist, floral pattern, 95% POLYESTER, 5% ELASTANE.",
+          tags: ["95% Polyester", "Lavender", "High Waist", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "girls-pyjamaset",
+          cat: "knit",
+          name: "Girls' Pyjamaset",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-92.jpg",
+          desc: "Color - Mustard, elasticated waistband trousers, decorative print, 100% COTTON.",
+          tags: ["100% Cotton", "Mustard", "Pyjama Set", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "heel-leggings",
+          cat: "knit",
+          name: "Heel Leggings",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-137.jpg",
+          desc: "Regular fit, decorative inscriptions at waist and heels, 66% VISCOSE, 30% POLYESTER, 4% ELASTANE.",
+          tags: ["66% Viscose", "30% Polyester", "Leggings", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "high-waist-shorts",
+          cat: "knit",
+          name: "High Waist Shorts",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-141.jpg",
+          desc: "Color - multicolor, 88% POLYESTER, 12% ELASTANE.",
+          tags: ["88% Polyester", "12% Elastane", "Multicolor", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "jogger",
+          cat: "knit",
+          name: "Jogger",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-127.jpg",
+          desc: "Color - Grey. Women's jogger trousers.",
+          tags: ["Cotton Blend", "Grey", "Jogger", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-oversized-tshirt",
+          cat: "knit",
+          name: "Kid's Oversized T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: null,
+          img: "images/products/1-73.jpg",
+          desc: "Color - pastel pink, round neck, short sleeves, decorative slogan to the front, 100% COTTON.",
+          tags: ["100% Cotton", "Pastel Pink", "Oversized", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-83.jpg",
+          desc: "Color - Beige, round neck, snap fasteners, uncovered hands and feet, 100% COTTON.",
+          tags: ["100% Cotton", "Beige", "Snap Fasteners", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-2",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-85.jpg",
+          desc: "Color - Salmon, long sleeves, snap fasteners, decorative print, 100% COTTON.",
+          tags: ["100% Cotton", "Salmon", "Long Sleeve", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-3",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-86.jpg",
+          desc: "Color - PaleTurquoise, round neck, short sleeves, snap fasteners, decorative print, 100% COTTON.",
+          tags: ["100% Cotton", "PaleTurquoise", "Snap Fasteners", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-4",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-87.jpg",
+          desc: "Color - blue, round neck, short sleeves, stripe pattern, 100% COTTON.",
+          tags: ["100% Cotton", "Blue", "Stripe", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-6",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-89.jpg",
+          desc: "Color - white, narrow straps, snap fasteners, plant pattern, decorative ruffles, 100% COTTON.",
+          tags: ["100% Cotton", "White", "Ruffles", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-7",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-90.jpg",
+          desc: "Color - Blue, round neck, uncovered hands and feet, snap fasteners, decorative print, 100% COTTON.",
+          tags: ["100% Cotton", "Blue", "Decorative Print", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-romper-8",
+          cat: "knit",
+          name: "Kid's Romper",
+          sub: "Children's Romper",
+          badge: null,
+          img: "images/products/1-91.jpg",
+          desc: "Color - Beige, long sleeves, zip fastening, soft fluffy inside, 100% COTTON.",
+          tags: ["100% Cotton", "Beige", "Zip Fastening", "Romper"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-set",
+          cat: "knit",
+          name: "Kid's Set",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-84.jpg",
+          desc: "Color - Salmon, long sleeves, snap fasteners, decorative print, 100% COTTON.",
+          tags: ["100% Cotton", "Salmon", "Long Sleeve", "Children's Set"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-set-2",
+          cat: "knit",
+          name: "Kid's Set",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-95.jpg",
+          desc: "PAW Patrol pyjama set, Color - Lavender, short sleeve T-shirt &amp; shorts with elasticated waistband, 100% COTTON.",
+          tags: ["100% Cotton", "Lavender", "Pyjama Set", "Children's Set"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-set-3",
+          cat: "knit",
+          name: "Kid's Set",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-96.jpg",
+          desc: "Minnie Mouse pyjama set, Color - dusty rose, trousers with elasticated waistband, 100% COTTON.",
+          tags: ["100% Cotton", "Dusty Rose", "Pyjama Set", "Children's Set"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-set-4",
+          cat: "knit",
+          name: "Kid's Set",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-97.jpg",
+          desc: "Color - White &amp; Black, round neck with border, short sleeves, stripe pattern, 100% COTTON.",
+          tags: ["100% Cotton", "White & Black", "Stripe", "Children's Set"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-set-5",
+          cat: "knit",
+          name: "Kid's Set",
+          sub: "Children's Set",
+          badge: null,
+          img: "images/products/1-98.jpg",
+          desc: "Color - Cream, dropped shoulder, elastic trims at neck/bottom/cuffs, 100% COTTON.",
+          tags: ["100% Cotton", "Cream", "Dropped Shoulder", "Children's Set"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirts",
+          cat: "knit",
+          name: "Men's T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1_11zon-1.jpg",
+          desc: "V-neck, raglan sleeves. Antibacterial, anti-pilling. 50% cotton, 50% polyester, 180 g/m²",
+          tags: ["V-Neck", "Raglan Sleeve", "50% Cotton", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirts-2",
+          cat: "knit",
+          name: "Men's T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-22.jpg",
+          desc: "50% cotton, 50% polyester single jersey.",
+          tags: ["50% Cotton", "Single Jersey", "Men's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirts-3",
+          cat: "knit",
+          name: "Men's T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-25.jpg",
+          desc: "Rick and Morty print. Color - Light Grey. Round neck, short sleeves. 95% COTTON, 5% VISCOSE.",
+          tags: ["95% Cotton", "Light Grey", "Print", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirts-4",
+          cat: "knit",
+          name: "Men's T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-26.jpg",
+          desc: "Color - Light Olive. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Light Olive", "Round Neck", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirts-5",
+          cat: "knit",
+          name: "Men's T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-27.jpg",
+          desc: "Batman. Color - Light Grey. Round neck, short sleeves. 95% COTTON, 5% VISCOSE.",
+          tags: ["95% Cotton", "Light Grey", "Batman", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-tshirt-pink",
+          cat: "knit",
+          name: "Men's T-Shirt",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/2-30.jpg",
+          desc: "Color - Pink. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Pink", "Round Neck", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-printed-tshirt",
+          cat: "knit",
+          name: "Men's Printed T-Shirt",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-28.jpg",
+          desc: "Color - Pale Turquoise. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Pale Turquoise", "Printed", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-printed-tshirts",
+          cat: "knit",
+          name: "Men's Printed T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-29.jpg",
+          desc: "Color - White. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "White", "Printed", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "tie-dye-tshirts",
+          cat: "knit",
+          name: "Tie Dye T-Shirts",
+          sub: "Men's T-Shirt",
+          badge: null,
+          img: "images/products/1-31.jpg",
+          desc: "Color - multicolor. Round neck, short sleeves. Tie dye effect. 100% COTTON.",
+          tags: ["100% Cotton", "Multicolor", "Tie Dye", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo",
+          cat: "knit",
+          name: "Men's Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-32.jpg",
+          desc: "3-button tab, polo neck. Antibacterial, anti-odour. 50% cotton, 50% polyester piqué, 220 g/m²",
+          tags: ["50% Cotton", "Polo Neck", "3-Button", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo-2",
+          cat: "knit",
+          name: "Men's Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-33.jpg",
+          desc: "3-button tab. Antibacterial, anti-odour. 50% cotton, 50% polyester piqué.",
+          tags: ["50% Cotton", "Polo", "Anti-Odour", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo-3",
+          cat: "knit",
+          name: "Men's Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1_11zon-1-3.jpg",
+          desc: "3-button tab, polo neck. 50% cotton, 50% polyester piqué.",
+          tags: ["50% Cotton", "Polo", "Classic", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo",
+          cat: "knit",
+          name: "Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1_11zon-1-4.jpg",
+          desc: "100% Cotton.",
+          tags: ["100% Cotton", "Polo", "Men's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo-2",
+          cat: "knit",
+          name: "Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-34.jpg",
+          desc: "100% Cotton.",
+          tags: ["100% Cotton", "Polo", "Men's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo-shirts",
+          cat: "knit",
+          name: "Polo Shirts",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-35.jpg",
+          desc: "Short Sleeve Zip Neck. 100% Cotton.",
+          tags: ["100% Cotton", "Zip Neck", "Short Sleeve", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo-shirts-2",
+          cat: "knit",
+          name: "Polo Shirts",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-36.jpg",
+          desc: "Green Striped Colour block. 100% Cotton.",
+          tags: ["100% Cotton", "Striped", "Green", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo-shirts-3",
+          cat: "knit",
+          name: "Polo Shirts",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-37.jpg",
+          desc: "Long Sleeve. 100% Cotton 220gsm cotton pique jersey.",
+          tags: ["100% Cotton", "Long Sleeve", "Pique", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "polo-shirts-4",
+          cat: "knit",
+          name: "Polo Shirts",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-38.jpg",
+          desc: "Short Sleeve Check. 100% Cotton.",
+          tags: ["100% Cotton", "Check", "Short Sleeve", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo-4",
+          cat: "knit",
+          name: "Men's Polo",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-39.jpg",
+          desc: "INTERLOCK-COTTON. 100% Cotton.",
+          tags: ["100% Cotton", "Interlock", "Men's", "Polo"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo-shirt",
+          cat: "knit",
+          name: "Men's Polo Shirt",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-41.jpg",
+          desc: "STRIPED. 100% Cotton.",
+          tags: ["100% Cotton", "Striped", "Polo", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-polo-shirts",
+          cat: "knit",
+          name: "Men's Polo Shirts",
+          sub: "Men's Polo",
+          badge: null,
+          img: "images/products/1-40.jpg",
+          desc: "Shirt with grid. 56% Cotton, 39% Polyester, 5% Elastane.",
+          tags: ["56% Cotton", "Grid", "Polo", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "men-sweat-shirt",
+          cat: "knit",
+          name: "Men's Sweat Shirt",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1_11zon-1-5.jpg",
+          desc: "Color: Blue-Gray. Round neck, regular fit. 100% cotton girth jersey.",
+          tags: ["100% Cotton", "Blue-Gray", "Sweatshirt", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirt",
+          cat: "knit",
+          name: "Men's Sweat Shirt",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-42.jpg",
+          desc: "Color: Red-Blue. Round neck, regular fit. 100% cotton girth jersey.",
+          tags: ["100% Cotton", "Red-Blue", "Sweatshirt", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirts",
+          cat: "knit",
+          name: "Men's Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-43.jpg",
+          desc: "Color: Gray-Blue Striped. Shorts with seagulls print. Short sleeve. 100% cotton.",
+          tags: ["100% Cotton", "Striped", "Shorts Set", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirt-2",
+          cat: "knit",
+          name: "Men's Sweat Shirt",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-44.jpg",
+          desc: "Color: White-Gray. Striped shorts + short sleeve shirt. 100% cotton.",
+          tags: ["100% Cotton", "White-Gray", "Set", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirts-2",
+          cat: "knit",
+          name: "Men's Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-45.jpg",
+          desc: "Color: Cotton Striped Blue Green Gray. Short sleeve. 100% cotton single jersey.",
+          tags: ["100% Cotton", "Striped", "Blue Green", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirts-4",
+          cat: "knit",
+          name: "Men's Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-46.jpg",
+          desc: "Color: Grey/Blue Stripe. Short sleeve sleep shirt + short pajama pants. 100% Cotton.",
+          tags: ["100% Cotton", "Grey/Blue", "Stripe", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirts-5",
+          cat: "knit",
+          name: "Men's Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-47.jpg",
+          desc: "Short sleeve. 100% Cotton.",
+          tags: ["100% Cotton", "Short Sleeve", "Sweatshirt", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweat-shirts",
+          cat: "knit",
+          name: "Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-48.jpg",
+          desc: "Color: Grey/Blue Stripe. Short sleeve sleep shirt. 100% Cotton.",
+          tags: ["100% Cotton", "Grey/Blue", "Short Sleeve", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweat-shirts-2",
+          cat: "knit",
+          name: "Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-49.jpg",
+          desc: "Color: Gray-Blue. Long Sleeve V-Neck Shirt. 60% cotton, 40% polyester.",
+          tags: ["60% Cotton", "Gray-Blue", "V-Neck", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-sweat-shirts-6",
+          cat: "knit",
+          name: "Men's Sweat Shirts",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-50.jpg",
+          desc: "Color - Blue. Round neck, regular fit. 100% cotton single jersey.",
+          tags: ["100% Cotton", "Blue", "Sweatshirt", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant",
+          cat: "knit",
+          name: "Men's Short Pant",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-51.jpg",
+          desc: "Color: Grey Melange.",
+          tags: ["Cotton Blend", "Grey Melange", "Shorts", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-joggers",
+          cat: "knit",
+          name: "Men's Joggers",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-52.jpg",
+          desc: "75% Cotton, 25% Polyester.",
+          tags: ["75% Cotton", "Joggers", "Comfort", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-joggers-2",
+          cat: "knit",
+          name: "Men's Joggers",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-53.jpg",
+          desc: "Mono Camo Colour block. 80% Cotton, 20% Polyester.",
+          tags: ["80% Cotton", "Camo", "Joggers", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-pant",
+          cat: "knit",
+          name: "Men's Pant",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1-56.jpg",
+          desc: "Color - multicolor. Three pockets, camo pattern. 60% COTTON, 38% POLYESTER, 2% ELASTANE.",
+          tags: ["60% Cotton", "Camo", "Three Pockets", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-2",
+          cat: "knit",
+          name: "Men's Short Pant",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1_11zon-1-6.jpg",
+          desc: "Color: Black &amp; Mesh.",
+          tags: ["Cotton", "Black", "Mesh Panel", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-3",
+          cat: "knit",
+          name: "Men's Short Pant",
+          sub: "Men's Knit",
+          badge: null,
+          img: "images/products/1_11zon-1-7.jpg",
+          desc: "100% Cotton.",
+          tags: ["100% Cotton", "Shorts", "Men's", "Casual"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-58.jpg",
+          desc: "Color - Light grey. Zip fastening, drawstring hood. 60% COTTON, 38% POLYESTER, 2% ELASTANE.",
+          tags: ["60% Cotton", "Light Grey", "Zip", "Drawstring Hood"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-2",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/2-59.jpg",
+          desc: "Color - green. Kangaroo pocket, elasticated trim. 100% POLYESTER.",
+          tags: ["100% Polyester", "Green", "Kangaroo Pocket", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-3",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/2-60.jpg",
+          desc: "Color - white. Kangaroo pocket. 51% COTTON, 49% POLYESTER.",
+          tags: ["51% Cotton", "White", "Kangaroo Pocket", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-4",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-61.jpg",
+          desc: "Color - black. Kangaroo pocket, elasticated trim. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Black", "Kangaroo Pocket", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-printed-jacket",
+          cat: "knit",
+          name: "Men's Printed Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-62.jpg",
+          desc: "Color - Light Grey. Kangaroo pocket. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Light Grey", "Printed", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-5",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-63.jpg",
+          desc: "Color - beige. 100% POLYESTER.",
+          tags: ["100% Polyester", "Beige", "Jacket", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jogging-jacket",
+          cat: "knit",
+          name: "Men's Jogging Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-64.jpg",
+          desc: "Colour - dark turquoise. 52% COTTON, 48% POLYESTER.",
+          tags: ["52% Cotton", "Dark Turquoise", "Jogging", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-6",
+          cat: "knit",
+          name: "Men's Jacket",
+          sub: "Men's Knit Jacket",
+          badge: null,
+          img: "images/products/1-65.jpg",
+          desc: "Color - Gray. Long Sleeve.",
+          tags: ["Polyester", "Gray", "Long Sleeve", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-tshirts",
+          cat: "knit",
+          name: "Kid's T-Shirts",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-67.jpg",
+          desc: "Color - Light Grey. Round neck, short sleeves, decorative print. 95% COTTON, 5% VISCOSE.",
+          tags: ["95% Cotton", "Light Grey", "Print", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-tshirts-sequins",
+          cat: "knit",
+          name: "Kid's T-Shirts with Sequins",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-68.jpg",
+          desc: "Color - Violet. Round neck, long sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Violet", "Sequins", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-tshirt-with-print",
+          cat: "knit",
+          name: "Kid's T-Shirt with Print",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-71.jpg",
+          desc: "Color - pastel pink. Round neck, short sleeves, decorative print. 100% COTTON.",
+          tags: ["100% Cotton", "Pastel Pink", "Print", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "minecraft-tshirts",
+          cat: "knit",
+          name: "Minecraft T-Shirts",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-72.jpg",
+          desc: "Color - white. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "White", "Minecraft", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "long-sleeve-tshirts",
+          cat: "knit",
+          name: "Long Sleeve T-Shirts",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-70.jpg",
+          desc: "Color - Dusty Rose. Round neck, long sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Dusty Rose", "Long Sleeve", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "long-sleeve-tshirts-2",
+          cat: "knit",
+          name: "Long Sleeve T-Shirts",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-75.jpg",
+          desc: "Color - Beige. Round neck, snap fasteners, decorative ruffles. 100% COTTON.",
+          tags: ["100% Cotton", "Beige", "Ruffles", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "minnie-mouse-ls-tshirt",
+          cat: "knit",
+          name: "Minnie Mouse Long Sleeve T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-76.jpg",
+          desc: "Color - purple. Round neck, snap fasteners, decorative ruffles. 100% COTTON.",
+          tags: ["100% Cotton", "Purple", "Minnie Mouse", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "printed-tshirt",
+          cat: "knit",
+          name: "Printed T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-79.jpg",
+          desc: "Color - Blue. Round neck, short sleeves, decorative print. 100% COTTON.",
+          tags: ["100% Cotton", "Blue", "Printed", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "spider-man-tshirt",
+          cat: "knit",
+          name: "Spider-Man T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-80.jpg",
+          desc: "Color - Red. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Red", "Spider-Man", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-tshirt",
+          cat: "knit",
+          name: "Kid's T-Shirt",
+          sub: "Children's T-Shirt",
+          badge: "Children's",
+          img: "images/products/1-81.jpg",
+          desc: "Color - Orange. Round neck, short sleeves. 100% COTTON.",
+          tags: ["100% Cotton", "Orange", "Round Neck", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "romper",
+          cat: "knit",
+          name: "Romper",
+          sub: "Children's Romper",
+          badge: "Children's",
+          img: "images/products/1-82.jpg",
+          desc: "Color - rose. Round neck, snap fasteners. 100% COTTON.",
+          tags: ["100% Cotton", "Rose", "Snap Fasteners", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "minnie-pyjama",
+          cat: "knit",
+          name: "Minnie Mouse Two Piece Pyjama",
+          sub: "Children's Set",
+          badge: "Children's",
+          img: "images/products/1-93.jpg",
+          desc: "Color - navy. Trousers with elasticated waistband. 100% COTTON.",
+          tags: ["100% Cotton", "Navy", "Minnie Mouse", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "tom-jerry-pyjama",
+          cat: "knit",
+          name: "Tom & Jerry Pyjama Set",
+          sub: "Children's Set",
+          badge: "Children's",
+          img: "images/products/1-94.jpg",
+          desc: "Color - Dusty rose. Short sleeve T-shirt, trousers. 100% COTTON.",
+          tags: ["100% Cotton", "Dusty Rose", "Tom & Jerry", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-sets",
+          cat: "knit",
+          name: "Kid's Sets",
+          sub: "Children's Set",
+          badge: "Children's",
+          img: "images/products/1-99.jpg",
+          desc: "Color - Cream. Round neck with border, button fastening on shoulder. 95% COTTON, 5% ELASTANE.",
+          tags: ["95% Cotton", "Cream", "Button Fastening", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweat-set",
+          cat: "knit",
+          name: "Sweat Set",
+          sub: "Children's Set",
+          badge: "Children's",
+          img: "images/products/1-100.jpg",
+          desc: "Color - Orange. 100% COTTON.",
+          tags: ["100% Cotton", "Orange", "Sweat Set", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-trouser",
+          cat: "knit",
+          name: "Kid's Trouser",
+          sub: "Children's Knit",
+          badge: "Children's",
+          img: "images/products/1-101.jpg",
+          desc: "100% Cotton.",
+          tags: ["100% Cotton", "Trouser", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-pant",
+          cat: "knit",
+          name: "Kids Pant",
+          sub: "Children's Knit",
+          badge: "Children's",
+          img: "images/products/1-104.jpg",
+          desc: "Color - black. Two pockets, jersey with loop fabric. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Black", "Two Pockets", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-trouser-2",
+          cat: "knit",
+          name: "Kid's Trouser",
+          sub: "Children's Knit",
+          badge: "Children's",
+          img: "images/products/1-105.jpg",
+          desc: "Color - Dark Grey. Decorative stitching, soft fluffy inside. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Dark Grey", "Fluffy Lining", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-trouser-4",
+          cat: "knit",
+          name: "Kid's Trouser",
+          sub: "Children's Knit",
+          badge: "Children's",
+          img: "images/products/1-108.jpg",
+          desc: "Two pockets, soft fluffy inside. 100% COTTON.",
+          tags: ["100% Cotton", "Two Pockets", "Fluffy", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweat-pant",
+          cat: "knit",
+          name: "Sweat Pant",
+          sub: "Children's Knit",
+          badge: "Children's",
+          img: "images/products/1-107.jpg",
+          desc: "Color - violet. Decorative print, jersey with loop fabric. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Violet", "Print", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "tshirt",
+          cat: "knit",
+          name: "T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-109.jpg",
+          desc: "The inscription More Love. Multicolored.",
+          tags: ["Cotton", "Multicolor", "Print", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "oversized-tie-dye",
+          cat: "knit",
+          name: "Oversized Tie Dye T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-110.jpg",
+          desc: "Color - Multicolor. Round neck, tie dye effect. 100% COTTON.",
+          tags: ["100% Cotton", "Multicolor", "Tie Dye", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-tshirt",
+          cat: "knit",
+          name: "Ladies T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-111.jpg",
+          desc: "Colour - Red. 100% COTTON.",
+          tags: ["100% Cotton", "Red", "Women's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-tshirt-2",
+          cat: "knit",
+          name: "Ladies T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-112.jpg",
+          desc: "Color - Navy Blue. Striped pattern, short sleeves. 95% COTTON, 5% ELASTANE.",
+          tags: ["95% Cotton", "Navy Blue", "Striped", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "tshirt-2",
+          cat: "knit",
+          name: "T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-113.jpg",
+          desc: "Color - Strong Pink. Kimono cut, round neckline. 50% COTTON, 50% MODAL.",
+          tags: ["50% Cotton", "Pink", "Kimono Cut", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-tshirt-3",
+          cat: "knit",
+          name: "Ladies T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-114.jpg",
+          desc: "Colour - Black. 100% COTTON.",
+          tags: ["100% Cotton", "Black", "Women's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "tshirt-animal",
+          cat: "knit",
+          name: "T-Shirt with Animal Pattern",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-115.jpg",
+          desc: "Color - Beige. Overprint in gold. 50% COTTON, 50% MODAL.",
+          tags: ["50% Cotton", "Beige", "Animal Print", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-tshirt-4",
+          cat: "knit",
+          name: "Ladies T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-118.jpg",
+          desc: "Colour - turquoise. 100% COTTON.",
+          tags: ["100% Cotton", "Turquoise", "Women's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-tshirt-5",
+          cat: "knit",
+          name: "Ladies T-Shirt",
+          sub: "Women's T-Shirt",
+          badge: null,
+          img: "images/products/1-119.jpg",
+          desc: "Colour - Multicolor. 100% COTTON.",
+          tags: ["100% Cotton", "Multicolor", "Women's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-sweat-shirts-set",
+          cat: "knit",
+          name: "Women's Sweat Shirts Set",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-120.jpg",
+          desc: "Color - Blue. 100% Cotton.",
+          tags: ["100% Cotton", "Blue", "Sweat Set", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "slogan-sweatshirt",
+          cat: "knit",
+          name: "Slogan Sweatshirt",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-121.jpg",
+          desc: "Color - NAVY BLUE. 82% cotton, 18% polyester.",
+          tags: ["82% Cotton", "Navy Blue", "Slogan", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mickey-mouse-sweatshirt",
+          cat: "knit",
+          name: "Mickey Mouse Sweatshirt",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-123.jpg",
+          desc: "Color - Black. Print with Mickey Mouse. 65% COTTON, 35% POLYESTER.",
+          tags: ["65% Cotton", "Black", "Mickey Mouse", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-sweatshirt",
+          cat: "knit",
+          name: "Ladies Sweatshirt",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-126.jpg",
+          desc: "Colour - White. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "White", "Sweatshirt", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweatshirt-puff-sleeves",
+          cat: "knit",
+          name: "Sweatshirt with Puff Sleeves",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-125.jpg",
+          desc: "Color - Pastel pink. Puffed sleeves, oversize cut. 94% POLYESTER, 6% ELASTANE.",
+          tags: ["94% Polyester", "Pastel Pink", "Puff Sleeves", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pant",
+          cat: "knit",
+          name: "Woman's Pant",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-128.jpg",
+          desc: "Colour - Pink. 96% POLYESTER, 4% ELASTANE.",
+          tags: ["96% Polyester", "Pink", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pant-2",
+          cat: "knit",
+          name: "Woman's Pant",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-129.jpg",
+          desc: "Colour - Red. 70% POLYESTER, 30% COTTON.",
+          tags: ["70% Polyester", "Red", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pants",
+          cat: "knit",
+          name: "Woman's Pants",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-130.jpg",
+          desc: "Color - Dark Grey. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Dark Grey", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pant-3",
+          cat: "knit",
+          name: "Woman's Pant",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-131.jpg",
+          desc: "Colour - green. 65% COTTON, 35% POLYESTER.",
+          tags: ["65% Cotton", "Green", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pant-4",
+          cat: "knit",
+          name: "Woman's Pant",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-132.jpg",
+          desc: "Colour - Brown. 63% POLYESTER, 33% VISCOSE, 4% ELASTANE.",
+          tags: ["63% Polyester", "Brown", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-leggins",
+          cat: "knit",
+          name: "Woman's Leggings",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-133.jpg",
+          desc: "Color - Burgundy. Seamless ribbed leggings, wide waistband. 92% polyamide, 8% elastane.",
+          tags: ["92% Polyamide", "Burgundy", "Ribbed", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-pant-5",
+          cat: "knit",
+          name: "Woman's Pant",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-145.jpg",
+          desc: "Color - Light Pink. 100% Cotton.",
+          tags: ["100% Cotton", "Light Pink", "Women's", "Bottoms"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "powerpuff-shorts",
+          cat: "knit",
+          name: "Powerpuff Girls Cotton Shorts",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-139.jpg",
+          desc: "Color - Pink. Mid rise, elasticated waist. 100% COTTON.",
+          tags: ["100% Cotton", "Pink", "Elasticated", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-134.jpg",
+          desc: "Color - Light Blue. Zip fastening, two pockets. 59% POLYESTER, 41% COTTON.",
+          tags: ["59% Polyester", "Light Blue", "Zip Hood", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-2",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-135.jpg",
+          desc: "Color - Light Grey. Drawstring hood, kangaroo pocket. 70% POLYESTER, 30% COTTON.",
+          tags: ["70% Polyester", "Light Grey", "Kangaroo Pocket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-3",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-136.jpg",
+          desc: "Colour - Black. 70% COTTON, 30% POLYESTER.",
+          tags: ["70% Cotton", "Black", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-mickey-hoodie",
+          cat: "knit",
+          name: "Woman's Mickey Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-138.jpg",
+          desc: "Colour - Nude. 52% COTTON, 48% POLYESTER.",
+          tags: ["52% Cotton", "Nude", "Mickey", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-4",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-140.jpg",
+          desc: "Colour - Beige. 100% POLYESTER.",
+          tags: ["100% Polyester", "Beige", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-5",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-144.jpg",
+          desc: "Colour - Beige. 70% POLYESTER, 30% COTTON.",
+          tags: ["70% Polyester", "Beige", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-6",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-146.jpg",
+          desc: "Colour - Dark Grey. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Dark Grey", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-7",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-148.jpg",
+          desc: "Colour - Beige. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Beige", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-hoodie-8",
+          cat: "knit",
+          name: "Woman's Hoodie",
+          sub: "Women's Knit",
+          badge: null,
+          img: "images/products/1-150.jpg",
+          desc: "Color - Black. 70% POLYESTER, 30% COTTON.",
+          tags: ["70% Polyester", "Black", "Hoodie", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womans-jacket",
+          cat: "knit",
+          name: "Woman's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-155.jpg",
+          desc: "Colour - green. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Green", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-157.jpg",
+          desc: "Color - White. 100% POLYESTER.",
+          tags: ["100% Polyester", "White", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket-2",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-158.jpg",
+          desc: "Colour - black. 100% POLYESTER.",
+          tags: ["100% Polyester", "Black", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket-3",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-159.jpg",
+          desc: "Colour - brown. 100% POLYESTER.",
+          tags: ["100% Polyester", "Brown", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket-4",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-160.jpg",
+          desc: "Colour - Black. 100% POLYESTER.",
+          tags: ["100% Polyester", "Black", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket-5",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-161.jpg",
+          desc: "Color - Beige. Short cut, two pockets, zip fastening.",
+          tags: ["Polyester", "Beige", "Zip", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-jacket-6",
+          cat: "knit",
+          name: "Women's Jacket",
+          sub: "Women's Knit Jacket",
+          badge: null,
+          img: "images/products/1-162.jpg",
+          desc: "Color - Beige. 100% POLYESTER.",
+          tags: ["100% Polyester", "Beige", "Jacket", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "babydoll-dress",
+          cat: "woven",
+          name: "Babydoll Dress",
+          sub: "Woven Garments",
+          badge: null,
+          img: "images/products/1-196.jpg",
+          desc: "Color - Begonia. Round neck with sleeves featuring ribbed cuffs.",
+          tags: ["100% Viscose", "Round Neck", "Ribbed Cuffs", "Dress"],
+          cert: "ISO 9001 · BSCI · WRAP",
+        },
+        {
+          id: "babydoll-dress-2",
+          cat: "woven",
+          name: "Babydoll Dress",
+          sub: "Woven Garments",
+          badge: null,
+          img: "images/products/1-198.jpg",
+          desc: "Color - Violet. Round neck, long sleeves in flowing viscose fabric.",
+          tags: ["100% Viscose", "Round Neck", "Long Sleeve", "Dress"],
+          cert: "ISO 9001 · BSCI · WRAP",
+        },
+        {
+          id: "biker-jeans",
+          cat: "woven",
+          name: "Biker Jeans",
+          sub: "Woven Garments",
+          badge: null,
+          img: "images/products/1-188.jpg",
+          desc: "Color - Light gray. Five pockets with decorative stitching detail.",
+          tags: ["98% Cotton", "2% Elastane", "Five Pockets", "Denim"],
+          cert: "ISO 9001 · BSCI · WRAP",
+        },
+        {
+          id: "mans-jacket",
+          cat: "woven",
+          name: "Man's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-243.jpg",
+          desc: 'Men\'s Hoodie Jacket, "Color": Pale Green.',
+          tags: ["Hoodie Jacket", "Pale Green", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-aop-shirt",
+          cat: "woven",
+          name: "Men's AOP Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-252.jpg",
+          desc: 'All-Over Print shirt, "Color": Black &amp; AOP.',
+          tags: ["AOP", "Black", "Men's Shirt", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-check-shirt",
+          cat: "woven",
+          name: "Men's Check Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-253.jpg",
+          desc: 'Men\'s Check Shirt, "Color": MLC Check.',
+          tags: ["Check", "MLC", "Men's Shirt", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-shirt",
+          cat: "woven",
+          name: "Men's Check Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-256.jpg",
+          desc: "Men's Check Shirt.",
+          tags: ["Check", "Men's Shirt", "Woven", "Cotton"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-denim-shirt",
+          cat: "woven",
+          name: "Men's Denim Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-258.jpg",
+          desc: "Men's Denim Shirt.",
+          tags: ["Denim", "Men's Shirt", "Woven", "Cotton"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-denim-shirt-2",
+          cat: "woven",
+          name: "Men's Denim Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-260.jpg",
+          desc: 'Men\'s Denim Shirt, "Color": 59j.',
+          tags: ["Denim", "59j", "Men's Shirt", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-denim-shirt-3",
+          cat: "woven",
+          name: "Men's Denim Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-261.jpg",
+          desc: 'Men\'s Denim Shirt, "Color": 55j.',
+          tags: ["Denim", "55j", "Men's Shirt", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-flannel-shirt",
+          cat: "woven",
+          name: "Men's Flannel Hoodie Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-255.jpg",
+          desc: 'Men\'s Flannel Hoodie Shirt, "Color": Flannel Check.',
+          tags: ["Flannel", "Hoodie", "Check", "Men's Shirt"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-7",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-238.jpg",
+          desc: "Men's Hoodie Jacket.",
+          tags: ["Hoodie Jacket", "Men's", "Woven", "Outerwear"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-8",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-239.jpg",
+          desc: "Men's Jacket Without Hoodie.",
+          tags: ["Jacket", "No Hood", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-9",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-240.jpg",
+          desc: 'Men\'s Hoodie Jacket, "Color": Mustard Yellow.',
+          tags: ["Hoodie Jacket", "Mustard Yellow", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-10",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-241.jpg",
+          desc: 'Men\'s Hoodie Jacket, "Color": Red.',
+          tags: ["Hoodie Jacket", "Red", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-11",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-242.jpg",
+          desc: "Men's Jacket Without Hoodie.",
+          tags: ["Jacket", "No Hood", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-jacket-12",
+          cat: "woven",
+          name: "Men's Jacket",
+          sub: "Men's Woven Jacket",
+          badge: null,
+          img: "images/products/1-244.jpg",
+          desc: "Men's Jacket Without Hoodie.",
+          tags: ["Jacket", "No Hood", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-long-pant",
+          cat: "woven",
+          name: "Men's Long Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-249.jpg",
+          desc: 'Men\'s Long Pant, "Color": MLC.',
+          tags: ["Long Pant", "MLC", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-4",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-245.jpg",
+          desc: "Men's Shorts, Camouflage print.",
+          tags: ["Shorts", "Camouflage", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-5",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-246.jpg",
+          desc: 'Men\'s Short Pant, "Color": Red. Comfort wear.',
+          tags: ["Shorts", "Red", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-6",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-247.jpg",
+          desc: 'Men\'s Short Pant, "Color": Blue.',
+          tags: ["Shorts", "Blue", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-7",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-248.jpg",
+          desc: 'Men\'s Short Pant, "Color": Black.',
+          tags: ["Shorts", "Black", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-8",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-250.jpg",
+          desc: 'Men\'s Short Pant, "Color": Navy.',
+          tags: ["Shorts", "Navy", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-short-pant-9",
+          cat: "woven",
+          name: "Men's Short Pant",
+          sub: "Men's Woven Bottoms",
+          badge: null,
+          img: "images/products/1-251.jpg",
+          desc: 'Men\'s Short Pant, "Color": Blue.',
+          tags: ["Shorts", "Blue", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-solid-shirt",
+          cat: "woven",
+          name: "Men's Solid Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-254.jpg",
+          desc: 'Men\'s Solid Shirt, "Color": 55j.',
+          tags: ["Solid Shirt", "55j", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-solid-shirt-2",
+          cat: "woven",
+          name: "Men's Solid Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-257.jpg",
+          desc: 'Men\'s Solid Shirt, "Color": 55j.',
+          tags: ["Solid Shirt", "55j", "Men's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "mens-solid-shirt-3",
+          cat: "woven",
+          name: "Men's Solid Shirt",
+          sub: "Men's Woven Shirt",
+          badge: null,
+          img: "images/products/1-259.jpg",
+          desc: "Men's Solid Shirt.",
+          tags: ["Solid Shirt", "Men's", "Woven", "Cotton"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-dress",
+          cat: "woven",
+          name: "Children Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-210.jpg",
+          desc: "Multi Color. Long Sleeve Round Dress.",
+          tags: ["Woven", "Long Sleeve", "Round Neck", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-dress-2",
+          cat: "woven",
+          name: "Children Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-211.jpg",
+          desc: "Black White Flannel Check. Long Sleeve.",
+          tags: ["Flannel Check", "Long Sleeve", "Black White", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-dress-3",
+          cat: "woven",
+          name: "Children Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-212.jpg",
+          desc: "Kid Round Dress 05j Color. Long Sleeve.",
+          tags: ["Round Dress", "Long Sleeve", "05j", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-dress-4",
+          cat: "woven",
+          name: "Children Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-213.jpg",
+          desc: "Children Dress. Short Sleeve.",
+          tags: ["Short Sleeve", "Woven", "Children's", "Dress"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-dress-5",
+          cat: "woven",
+          name: "Children Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-214.jpg",
+          desc: "Children Dress with print. Short Sleeve.",
+          tags: ["Print", "Short Sleeve", "Woven", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "childrens-dress",
+          cat: "woven",
+          name: "Children's Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-206.jpg",
+          desc: "Color - Pink. Round neckline, bare shoulders, decorative lacing on the back. 100% VISCOSE.",
+          tags: ["100% Viscose", "Pink", "Bare Shoulders", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "gathered-dress",
+          cat: "woven",
+          name: "Gathered Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-199.jpg",
+          desc: "Color - Coral. Midi length, short sleeves, single button fastening to the back. 100% COTTON.",
+          tags: ["100% Cotton", "Coral", "Midi Length", "Short Sleeve"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "girls-dress",
+          cat: "woven",
+          name: "Girls Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-202.jpg",
+          desc: "Girls woven dress.",
+          tags: ["Woven", "Girls", "Dress", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "girls-dress-2",
+          cat: "woven",
+          name: "Girls Dress",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-204.jpg",
+          desc: "Color - lavender. Flared design, round neck, single button fastening. 100% POLYESTER.",
+          tags: ["100% Polyester", "Lavender", "Flared", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "denim-dress",
+          cat: "woven",
+          name: "Denim Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-201.jpg",
+          desc: "Color - blue. Classic collar, short sleeves, button fastening, decorative embroidery. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Blue", "Denim", "Embroidery"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "midi-dress",
+          cat: "woven",
+          name: "Midi Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-207.jpg",
+          desc: "Color - Blue. Round neckline, button closure on the back, short sleeves. 100% VISCOSE.",
+          tags: ["100% Viscose", "Blue", "Midi", "Button Back"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dress-with-straps",
+          cat: "woven",
+          name: "Dress With Straps",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-208.jpg",
+          desc: "Color - Pink. Maxi length, narrow straps, decorative ruffles. 100% COTTON.",
+          tags: ["100% Cotton", "Pink", "Maxi", "Ruffles"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dress-with-collections",
+          cat: "woven",
+          name: "Dress With Collections",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-209.jpg",
+          desc: "Color fuchsia. Length of copper. Square cut, short sleeves, decorative assemblies.",
+          tags: ["Fuchsia", "Square Cut", "Short Sleeve", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "playsuit",
+          cat: "woven",
+          name: "Playsuit",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-205.jpg",
+          desc: "Color - Turquoise. Cami straps, two pockets. 100% COTTON.",
+          tags: ["100% Cotton", "Turquoise", "Cami Straps", "Playsuit"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-215.jpg",
+          desc: "Color - blue jeans. Adjustable suspenders, 3 pockets, decorative buttons. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Blue Jeans", "Suspenders", "Denim"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress-2",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-216.jpg",
+          desc: "Color - Black. Mini length, adjustable suspenders, decorative buttons. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Black", "Mini", "Suspenders"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress-3",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-217.jpg",
+          desc: "Color: Light Pink. Mini length, adjustable suspenders. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Light Pink", "Mini", "Suspenders"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress-4",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-218.jpg",
+          desc: "Color - Navy Blue. Top bottom adjust, adjustable suspenders, decorative buttons.",
+          tags: ["Navy Blue", "Adjustable", "Denim", "Dungaree"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress-5",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-219.jpg",
+          desc: "Color - Black. Mini length, adjustable suspenders. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Black", "Mini", "Dungaree"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "dungaree-dress-6",
+          cat: "woven",
+          name: "Dungaree Dress",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-220.jpg",
+          desc: "Color - 55j. Mini length, adjustable suspenders. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "55j", "Mini", "Dungaree"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-jacket",
+          cat: "woven",
+          name: "Children Jacket",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-221.jpg",
+          desc: "Children Hoodie Jacket.",
+          tags: ["Hoodie", "Jacket", "Children's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-jacket-2",
+          cat: "woven",
+          name: "Children Jacket",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-222.jpg",
+          desc: "Children Hoodie Jacket.",
+          tags: ["Hoodie", "Jacket", "Children's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-jacket-3",
+          cat: "woven",
+          name: "Children Jacket",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-223.jpg",
+          desc: "Children Hoodie Jacket with Decorative Element.",
+          tags: ["Hoodie", "Decorative", "Children's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-jacket-4",
+          cat: "woven",
+          name: "Children Jacket",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-224.jpg",
+          desc: "Children Denim Jacket.",
+          tags: ["Denim", "Jacket", "Children's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "jacket-with-print",
+          cat: "woven",
+          name: "Jacket With A Print",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-225.jpg",
+          desc: "Color - blue. Zip fastening, decorative print, welts. 100% COTTON.",
+          tags: ["100% Cotton", "Blue", "Print", "Zip Jacket"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "children-jacket-5",
+          cat: "woven",
+          name: "Children Jacket",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-226.jpg",
+          desc: "Children Hoodie Jacket.",
+          tags: ["Hoodie", "Jacket", "Children's", "Woven"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-147.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-2",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-149.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-3",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-151.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-long-sleeve-shirt",
+          cat: "woven",
+          name: "Kid's Long Sleeve Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-152.jpg",
+          desc: "Children's long sleeve woven shirt.",
+          tags: ["Woven", "Long Sleeve", "Shirt", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-woven-shirt",
+          cat: "woven",
+          name: "Kid's Woven Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-154.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-full-sleeve-shirt",
+          cat: "woven",
+          name: "Kid's Full Sleeve Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-156.jpg",
+          desc: "Children's full sleeve woven shirt.",
+          tags: ["Woven", "Full Sleeve", "Shirt", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-4",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-163.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-5",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-165.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-6",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-167.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-7",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-168.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-8",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-169.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "kids-shirt-9",
+          cat: "woven",
+          name: "Kid's Shirt",
+          sub: "Children's Woven Shirt",
+          badge: "Children's",
+          img: "images/products/1-171.jpg",
+          desc: "Children's woven shirt.",
+          tags: ["Woven", "Shirt", "Children's", "Classic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "boys-jeans-trousers",
+          cat: "woven",
+          name: "Boys Jeans Trousers",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-187.jpg",
+          desc: "Color - Blue. Comfortable drawstring, two pockets. 78% COTTON, 21% POLYESTER, 1% ELASTANE.",
+          tags: ["78% Cotton", "Blue", "Drawstring", "Children's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "girls-skirt",
+          cat: "woven",
+          name: "Girls Skirt",
+          sub: "Children's Woven",
+          badge: "Children's",
+          img: "images/products/1-178.jpg",
+          desc: "Color - pastel pink. Midi length, elasticated waist, decorative print. 100% COTTON.",
+          tags: ["100% Cotton", "Pastel Pink", "Midi", "Elasticated"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "printed-skirt",
+          cat: "woven",
+          name: "Printed Skirt",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-175.jpg",
+          desc: "Color - salmon. Elasticated waist, floral pattern, without lining. 100% VISCOSE.",
+          tags: ["100% Viscose", "Salmon", "Floral", "Elasticated"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "pleated-skirt",
+          cat: "woven",
+          name: "Pleated Skirt",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-176.jpg",
+          desc: "Color - Navy. Midi length, elasticated waist.",
+          tags: ["Navy", "Midi", "Elasticated", "Pleated"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "denim-skirt",
+          cat: "woven",
+          name: "Denim Skirt",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-172.jpg",
+          desc: "Color - Blue. Zip and button fastening, 5 pockets, without lining. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Blue", "5 Pockets", "Denim"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "denim-skirt-2",
+          cat: "woven",
+          name: "Denim Skirt",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-180.jpg",
+          desc: "Color - Black. Relaxed design, button fastening, two pockets. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Black", "Button", "Denim"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "denim-skirt-3",
+          cat: "woven",
+          name: "Denim Skirt",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-181.jpg",
+          desc: "Color - Blue jeans. A cut, mini length, without lining. 100% COTTON.",
+          tags: ["100% Cotton", "Blue Jeans", "Mini", "Denim"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "jogger-jeans",
+          cat: "woven",
+          name: "Jogger Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-184.jpg",
+          desc: "Color - mustard. One button fastening, four pockets, striped hems. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Mustard", "Striped Hems", "Jogger"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "jogger-jeans-2",
+          cat: "woven",
+          name: "Jogger Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-185.jpg",
+          desc: "Color - Dark Blue. 98% COTTON, 2% ELASTANE.",
+          tags: ["98% Cotton", "Dark Blue", "Jogger", "Jeans"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "pull-on-jeans",
+          cat: "woven",
+          name: "Pull On Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-183.jpg",
+          desc: "Color - Blue. Comfortable drawstring, five pockets. 60% COTTON, 39% POLYESTER, 1% ELASTANE.",
+          tags: ["60% Cotton", "Blue", "Drawstring", "Pull On"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "wide-leg-jeans",
+          cat: "woven",
+          name: "Wide Leg Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-189.jpg",
+          desc: "Color - blue. 99% COTTON, 1% ELASTANE.",
+          tags: ["99% Cotton", "Blue", "Wide Leg", "Jeans"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "hello-kitty-jeans",
+          cat: "woven",
+          name: "Hello Kitty Paperbag Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-192.jpg",
+          desc: "Color - blue. 100% COTTON.",
+          tags: ["100% Cotton", "Blue", "Hello Kitty", "Paperbag"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "paperbag-jeans",
+          cat: "woven",
+          name: "Paperbag Jeans",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-190.jpg",
+          desc: "Color - blue. 80% COTTON, 18% POLYESTER, 2% ELASTANE.",
+          tags: ["80% Cotton", "Blue", "Paperbag", "Jeans"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "jogger-sweatpants",
+          cat: "woven",
+          name: "Jogger Sweatpants",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-193.jpg",
+          desc: "Color - Pink. 60% COTTON, 40% POLYESTER.",
+          tags: ["60% Cotton", "Pink", "Jogger", "Sweatpants"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "leggings",
+          cat: "woven",
+          name: "Leggings",
+          sub: "Women's Woven",
+          badge: null,
+          img: "images/products/1-195.jpg",
+          desc: "Color - black. 85% POLYESTER, 15% ELASTANE.",
+          tags: ["85% Polyester", "Black", "Leggings", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "basket",
+          cat: "handicraft",
+          name: "Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-16.jpg",
+          desc: "Color - Brown. Handcrafted artisan basket.",
+          tags: ["Natural Fibre", "Handcrafted", "Artisan", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "blanket",
+          cat: "handicraft",
+          name: "Blanket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/08x-1.jpg",
+          desc: "130 cm × 160 cm, 70% COTTON, 30% POLYESTER.",
+          tags: ["70% Cotton", "30% Polyester", "130×160 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "blanket-2",
+          cat: "handicraft",
+          name: "Blanket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/09x-1.jpg",
+          desc: "Color - Light Grey &amp; Dusty Rose, 130 cm × 160 cm, 100% POLYESTER.",
+          tags: ["100% Polyester", "130×160 cm", "Dusty Rose", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "cushion",
+          cat: "handicraft",
+          name: "Cushion",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1.jpg",
+          desc: 'Color - light green, "Size": ⌀ 45 cm, 100% POLYESTER.',
+          tags: ["100% Polyester", "Light Green", "⌀ 45 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "decorative-bowl",
+          cat: "handicraft",
+          name: "Decorative Bowl",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-1-scaled.jpg",
+          desc: 'Color - black, "Size": ∅ 29 cm × 12.5 cm, 100% IRON.',
+          tags: ["100% Iron", "Black", "∅ 29 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "decorative-bowl-2",
+          cat: "handicraft",
+          name: "Decorative Bowl",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-2-scaled.jpg",
+          desc: 'Color - golden, "Size": ⌀ 25 cm × 15 cm, 100% IRON.',
+          tags: ["100% Iron", "Golden", "⌀ 25 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "decorative-bowl-3",
+          cat: "handicraft",
+          name: "Decorative Bowl",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-3-scaled.jpg",
+          desc: 'Color - beige, "Size": ⌀ 36 cm × 6.5 cm, 100% HYACINTH.',
+          tags: ["100% Hyacinth", "Beige", "⌀ 36 cm", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "decorative-tray",
+          cat: "handicraft",
+          name: "Decorative Tray",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-4-scaled.jpg",
+          desc: 'Color - beige, "Size": 30 × 20 × 4 cm, 90% WATER HYACINTH, 10% STEEL.',
+          tags: ["90% Hyacinth", "10% Steel", "30×20 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "lantern",
+          cat: "handicraft",
+          name: "Lantern",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-5.jpg",
+          desc: 'Color - beige, "Size": ∅ 22 cm × 31 cm, 90% WOOD, 10% GLASS.',
+          tags: ["90% Wood", "10% Glass", "∅ 22 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "ottoman",
+          cat: "handicraft",
+          name: "Ottoman",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-6.jpg",
+          desc: "Color - Beige. Handcrafted home textile ottoman.",
+          tags: ["Beige", "Handcrafted", "Home Décor", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "plant-pot-cover",
+          cat: "handicraft",
+          name: "Plant Pot Cover",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-7.jpg",
+          desc: "Size: Ø 22 cm × 19 cm. Natural handwoven plant pot cover.",
+          tags: ["Ø 22 cm", "Handwoven", "Natural Fibre", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-8.jpg",
+          desc: "Size: 60 × 90 cm, 100% COTTON cotton rug.",
+          tags: ["100% Cotton", "60×90 cm", "Textile", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-2",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-9.jpg",
+          desc: 'Color - cream, "Size": 60 × 90 cm, 100% COTTON.',
+          tags: ["100% Cotton", "Cream", "60×90 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-3",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-10.jpg",
+          desc: 'Color - cream, "Size": 80 × 120 cm, 100% COTTON.',
+          tags: ["100% Cotton", "Cream", "80×120 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-4",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-11.jpg",
+          desc: 'Color - cream, "Size": 50 × 80 cm, 100% COTTON.',
+          tags: ["100% Cotton", "Cream", "50×80 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-5",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-12.jpg",
+          desc: 'Color - white, "Size": 50 × 80 cm, 80% COTTON, 15% POLYESTER, 5% OTHERS.',
+          tags: ["80% Cotton", "White", "50×80 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-6",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/Black-1.jpg",
+          desc: 'Color - Black &amp; White, "Size": 60 × 90 cm, 90% COTTON, 10% OTHERS.',
+          tags: ["90% Cotton", "Black & White", "60×90 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "rug-7",
+          cat: "handicraft",
+          name: "Rug",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-13.jpg",
+          desc: 'Color - cream, "Size": 60 × 90 cm, 100% COTTON.',
+          tags: ["100% Cotton", "Cream", "60×90 cm", "Textile"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "standing-decoration",
+          cat: "handicraft",
+          name: "Standing Decoration",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-14-scaled.jpg",
+          desc: 'Color - beige, "Size": 20 × 16 cm, 95% POLYESTER, 5% POLYPROPYLENE.',
+          tags: ["95% Polyester", "Beige", "20×16 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "standing-decoration-2",
+          cat: "handicraft",
+          name: "Standing Decoration",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-15-scaled.jpg",
+          desc: 'Color - beige, "Size": ⌀ 20 × 6 × 29 cm, 100% MDF.',
+          tags: ["100% MDF", "Beige", "⌀ 20 cm", "Home Décor"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "storage-basket",
+          cat: "handicraft",
+          name: "Storage Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-17.jpg",
+          desc: "Size: 30 × 20 × 13 cm. Natural fibre storage basket.",
+          tags: ["Natural Fibre", "30×20 cm", "Storage", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "storage-basket-2",
+          cat: "handicraft",
+          name: "Storage Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-18.jpg",
+          desc: "Size: ⌀ 28 × 22 cm, 85% SEAGRASS, 15% JUTE.",
+          tags: ["85% Seagrass", "15% Jute", "⌀ 28 cm", "Storage"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "storage-basket-3",
+          cat: "handicraft",
+          name: "Storage Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-19.jpg",
+          desc: 'Color - beige, "Size": ⌀ 25 × 23 cm, 100% SEAGRASS.',
+          tags: ["100% Seagrass", "Beige", "⌀ 25 cm", "Storage"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "woven-basket",
+          cat: "handicraft",
+          name: "Woven Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-20.jpg",
+          desc: 'Color - beige, "Size": ⌀ 20 × 24 cm, 90% HYACINTH, 10% IRON.',
+          tags: ["90% Hyacinth", "10% Iron", "⌀ 20 cm", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "woven-basket-2",
+          cat: "handicraft",
+          name: "Woven Basket",
+          sub: "Handicraft & Home Textile",
+          badge: null,
+          img: "images/products/1-21-scaled.jpg",
+          desc: 'Color - beige, "Size": ⌀ 30 × 34 cm, 90% HYACINTH, 10% IRON.',
+          tags: ["90% Hyacinth", "10% Iron", "⌀ 30 cm", "Artisan"],
+          cert: "Alliance · Accord · OCS",
+        },
+        {
+          id: "boxer-shorts",
+          cat: "lingerie",
+          name: "Boxer Shorts",
+          sub: "Lingerie & Nightwear",
+          badge: null,
+          img: "images/products/1-164.jpg",
+          desc: "Colour - Anthracite. Underpants jersey with comfortable elasticated waistband.",
+          tags: ["95% Cotton", "5% Elastane", "Jersey", "Underwear"],
+          cert: "WRAP · BSCI · Accord",
+        },
+        {
+          id: "boxer-shorts-2",
+          cat: "lingerie",
+          name: "Boxer Shorts",
+          sub: "Lingerie & Nightwear",
+          badge: "Multi-colour",
+          img: "images/products/1-166.jpg",
+          desc: "Colour - Black, Navy, Blue, Green, Red. Underpants jersey, available in multiple colourways.",
+          tags: ["95% Cotton", "5% Elastane", "Multi-colour", "Jersey"],
+          cert: "WRAP · BSCI · Accord",
+        },
+        {
+          id: "christmas-briefs-ladies",
+          cat: "lingerie",
+          name: "Christmas Briefs Ladies",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-231.jpg",
+          desc: "Multipack of 4 briefs, finished with an elegant bow. Fits normal.",
+          tags: ["4-Pack", "Bow Detail", "Women's", "Festive"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "christmas-briefs-women",
+          cat: "lingerie",
+          name: "Christmas Briefs Women",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-230.jpg",
+          desc: "Fits normal, 4-Pack.",
+          tags: ["4-Pack", "Women's", "Cotton", "Festive"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "christmas-briefs-women-2",
+          cat: "lingerie",
+          name: "Christmas Briefs Women",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-232.jpg",
+          desc: "Multipack of 4 briefs, finished with an elegant bow. Fits normal.",
+          tags: ["4-Pack", "Bow Detail", "Women's", "Festive"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-briefs",
+          cat: "lingerie",
+          name: "Ladies Briefs",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-227.jpg",
+          desc: "Hearts Print Valentine 4-Pack. 100% cotton.",
+          tags: ["4-Pack", "Hearts Print", "100% Cotton", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-thong",
+          cat: "lingerie",
+          name: "Ladies Thong",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-236.jpg",
+          desc: "Color: Red/Pink/Blue. Bamboo fabric. 65% viscose, 30% cotton, 5% elastane.",
+          tags: ["Bamboo", "65% Viscose", "Thong", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "ladies-thong-2",
+          cat: "lingerie",
+          name: "Ladies Thong",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-237.jpg",
+          desc: "Gray Bamboo. Fits normal. 65% viscose, 30% cotton, 5% elastane.",
+          tags: ["Bamboo", "Grey", "Thong", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "loose-fit-boxer",
+          cat: "lingerie",
+          name: "Loose Fit Boxer",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-203-scaled.jpg",
+          desc: "Loose Fit Boxer, 3-colour pack.",
+          tags: ["Loose Fit", "3-Pack", "100% Cotton", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "web-boxer",
+          cat: "lingerie",
+          name: "Web Boxer",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-197.jpg",
+          desc: "Men's SPARPACK. 100% cotton.",
+          tags: ["SPARPACK", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "web-boxer-2",
+          cat: "lingerie",
+          name: "Web Boxer",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/2-202.jpg",
+          desc: "Boxer Shorts Men SPARPACK. 100% cotton.",
+          tags: ["SPARPACK", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "women-brief",
+          cat: "lingerie",
+          name: "Women Brief",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-229.jpg",
+          desc: "Color: Beige Skin Color. 95% cotton, 5% elastane.",
+          tags: ["95% Cotton", "Beige", "Brief", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "women-briefs",
+          cat: "lingerie",
+          name: "Women Briefs",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-228.jpg",
+          desc: "Slip with lace. Color: Midi Black. 86% Cotton, 7% Polyamide, 7% Elastane.",
+          tags: ["Lace", "Midi Black", "Slip", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-briefs",
+          cat: "lingerie",
+          name: "Women's Briefs",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-233.jpg",
+          desc: "Multipack of 4 briefs, finished with an elegant bow. 95% cotton, 5% elastane.",
+          tags: ["4-Pack", "95% Cotton", "Bow Detail", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-hipster",
+          cat: "lingerie",
+          name: "Women's Hipster",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-234.jpg",
+          desc: "Close fit. Bamboo fabric. 65% viscose, 30% cotton, 5% elastane.",
+          tags: ["Bamboo", "Close Fit", "Hipster", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "womens-hipster-2",
+          cat: "lingerie",
+          name: "Women's Hipster",
+          sub: "Women's Lingerie",
+          badge: null,
+          img: "images/products/1-235.jpg",
+          desc: "6-Pack. Summer Special. Fits normal. 95% cotton, 5% elastane.",
+          tags: ["6-Pack", "95% Cotton", "Summer", "Women's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "woven-boxers",
+          cat: "lingerie",
+          name: "Woven Boxers",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-179.jpg",
+          desc: "Boxer Shorts checkered or print. 100% cotton for men.",
+          tags: ["Checkered", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "woven-boxers-2",
+          cat: "lingerie",
+          name: "Woven Boxers",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-182.jpg",
+          desc: "Boxer Shorts checkered or print. 100% cotton for men.",
+          tags: ["Checkered", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "woven-boxers-3",
+          cat: "lingerie",
+          name: "Woven Boxers",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-186.jpg",
+          desc: "Boxer Shorts checkered or print. 100% cotton for men.",
+          tags: ["Checkered", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "woven-boxers-4",
+          cat: "lingerie",
+          name: "Woven Boxers",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-191.jpg",
+          desc: "Boxer Shorts checkered or print. 100% cotton for men.",
+          tags: ["Checkered", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "woven-boxers-5",
+          cat: "lingerie",
+          name: "Woven Boxers",
+          sub: "Men's Lingerie",
+          badge: null,
+          img: "images/products/1-194.jpg",
+          desc: "Boxer Shorts checkered or print. 100% cotton for men.",
+          tags: ["Checkered", "100% Cotton", "Woven", "Men's"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater",
+          cat: "sweater",
+          name: "Sweater & Knitwear",
+          sub: "Sweaters",
+          badge: "New Season",
+          img: "https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?w=600&auto=format&fit=crop",
+          desc: "Lightweight cardigans to heavy-gauge winter sweaters with intricate jacquard patterns and seasonal colour palettes.",
+          tags: ["Wool", "Acrylic", "Jacquard", "Cardigan"],
+          cert: "Oeko-Tex · OCS · BSCI",
+        },
+        {
+          id: "sweater-cable-crew",
+          cat: "sweater",
+          name: "Cable Crew Sweater",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1631541909061-71e349d1f203?w=500&auto=format&fit=crop",
+          desc: "Classic cable knit crew-neck sweater. Color: Cream. 100% wool blend, warm & cosy.",
+          tags: ["Cable Knit", "Crew Neck", "Cream", "Wool Blend"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-chunky-grey",
+          cat: "sweater",
+          name: "Chunky Knit Sweater",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?w=500&auto=format&fit=crop",
+          desc: "Oversized chunky knit pullover. Color: Grey Marl. 50% wool, 50% acrylic.",
+          tags: ["Chunky Knit", "Oversized", "Grey Marl", "Wool-Acrylic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-turtleneck-blk",
+          cat: "sweater",
+          name: "Turtleneck Sweater",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1633008004535-b255bab275cc?w=500&auto=format&fit=crop",
+          desc: "Slim-fit ribbed turtleneck. Color: Black. 80% merino wool, 20% nylon.",
+          tags: ["Turtleneck", "Slim Fit", "Black", "Merino Wool"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-cardigan-navy",
+          cat: "sweater",
+          name: "Knit Cardigan",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1680292783974-a9a336c10366?w=500&auto=format&fit=crop",
+          desc: "Open-front knit cardigan with pockets. Color: Navy. 60% cotton, 40% acrylic.",
+          tags: ["Cardigan", "Open Front", "Navy", "Cotton-Acrylic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-striped-nw",
+          cat: "sweater",
+          name: "Striped Pullover",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1580331451062-99ff652288d7?w=600&auto=format&fit=crop",
+          desc: "Classic striped knit pullover. Color: Navy & White. 100% cotton.",
+          tags: ["Striped", "Navy & White", "100% Cotton", "Pullover"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-vest-mustard",
+          cat: "sweater",
+          name: "V-Neck Knit Vest",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=600&auto=format&fit=crop",
+          desc: "V-neck knit vest. Color: Mustard. 70% lambswool, 30% nylon.",
+          tags: ["V-Neck", "Vest", "Mustard", "Lambswool"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-hoodie-camel",
+          cat: "sweater",
+          name: "Knit Hoodie",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=500&auto=format&fit=crop",
+          desc: "Relaxed-fit knitted hoodie with kangaroo pocket. Color: Camel. 55% cotton, 45% acrylic.",
+          tags: ["Hoodie", "Kangaroo Pocket", "Camel", "Cotton-Acrylic"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "sweater-polo-green",
+          cat: "sweater",
+          name: "Knit Polo Sweater",
+          sub: "Sweater & Knitwear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1610652492500-ded49ceeb378?w=600&auto=format&fit=crop",
+          desc: "Ribbed knit polo sweater. Color: Forest Green. 100% merino wool.",
+          tags: ["Polo", "Ribbed", "Forest Green", "Merino Wool"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear",
+          cat: "activewear",
+          name: "Performance Activewear",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&auto=format&fit=crop",
+          desc: "Moisture-wicking, ergonomic activewear with sublimation printing for leading sports and fitness brands worldwide.",
+          tags: ["Stretch", "Moisture-Wick", "Sublimation", "Sports"],
+          cert: "Oeko-Tex · BSCI",
+        },
+        {
+          id: "activewear-leggings-blk",
+          cat: "activewear",
+          name: "Performance Leggings",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=600&auto=format&fit=crop",
+          desc: "High-waist 4-way stretch leggings. Color: Black. 88% polyester, 12% elastane.",
+          tags: ["Leggings", "High Waist", "4-Way Stretch", "Moisture-Wick"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-sports-bra",
+          cat: "activewear",
+          name: "Sports Bra",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1595909315417-2edd382a56dc?w=500&auto=format&fit=crop",
+          desc: "Medium-support sports bra. Color: Dusty Rose. Moisture-wicking. 80% polyamide, 20% elastane.",
+          tags: ["Sports Bra", "Medium Support", "Dusty Rose", "Polyamide"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-shorts-nvy",
+          cat: "activewear",
+          name: "Training Shorts",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&auto=format&fit=crop",
+          desc: "Lightweight training shorts with side pockets. Color: Dark Navy. 100% polyester.",
+          tags: ["Training Shorts", "Lightweight", "Pockets", "Polyester"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-track-jacket",
+          cat: "activewear",
+          name: "Track Jacket",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1768410318478-4ceb65930355?w=500&auto=format&fit=crop",
+          desc: "Full-zip track jacket with mesh lining. Color: Forest Green. 100% polyester.",
+          tags: ["Track Jacket", "Full Zip", "Breathable", "Polyester"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-hoodie-ch",
+          cat: "activewear",
+          name: "Performance Hoodie",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&auto=format&fit=crop",
+          desc: "Fleece-lined performance hoodie. Color: Charcoal. 60% cotton, 40% polyester.",
+          tags: ["Hoodie", "Fleece-Lined", "Charcoal", "Cotton-Polyester"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-tank-wht",
+          cat: "activewear",
+          name: "Workout Tank Top",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&auto=format&fit=crop",
+          desc: "Sleeveless workout tank with built-in support. Color: White. 92% polyester, 8% elastane.",
+          tags: ["Tank Top", "Built-in Support", "White", "Quick-Dry"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-jogger-grey",
+          cat: "activewear",
+          name: "Slim Fit Joggers",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1610720991840-457ad2c7a658?w=500&auto=format&fit=crop",
+          desc: "Tapered slim-fit joggers with zip pockets. Color: Light Grey. 65% cotton, 35% polyester.",
+          tags: ["Joggers", "Slim Fit", "Light Grey", "Zip Pockets"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+        {
+          id: "activewear-zip-top",
+          cat: "activewear",
+          name: "Half-Zip Performance Top",
+          sub: "Activewear",
+          badge: null,
+          img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop",
+          desc: "Half-zip long sleeve performance top. Color: Teal. 4-way stretch. 90% polyester, 10% elastane.",
+          tags: ["Half-Zip", "Long Sleeve", "Teal", "4-Way Stretch"],
+          cert: "BSCI · Oeko-Tex · WRAP",
+        },
+      ];
+
+      const CAT_META = {
+        knit: {
+          label: "Knit Garments",
+          feats: [
+            "Combed cotton & cotton-poly blends available",
+            "Custom embroidery, screen print & DTG printing",
+            "Reactive, pigment & discharge dyeing options",
+            "Yarn-dyed stripes and engineered prints",
+            "Sizes S-3XL, standard and plus fit",
+            "Retail-ready packaging & private labelling",
+          ],
+          specs: {
+            Fabric: "100% Cotton / 60-40 Cotton-Polyester / Cotton-Elastane",
+            GSM: "140 GSM - 280 GSM",
+            Dyeing: "Reactive, Pigment, Discharge",
+            Print: "Screen print, DTG, Embroidery, Applique",
+            MOQ: "200 pcs per style",
+            "Lead Time": "45-60 days from approved sample",
+            Sizes: "S - 3XL",
+            Compliance: "AQL 2.5 pre-shipment inspection",
+          },
+          certs: [
+            "amfori BSCI",
+            "Oeko-Tex Standard 100",
+            "WRAP",
+            "Accord on Fire & Building Safety",
+          ],
+        },
+        woven: {
+          label: "Woven Apparel",
+          feats: [
+            "Woven shirts, jackets, trousers & shorts",
+            "Denim, twill, poplin, flannel & chambray fabrics",
+            "Full-cut & slim-fit silhouettes",
+            "Garment wash, enzyme wash & stone-wash finishing",
+            "Embroidery, print & badge decoration",
+            "Retail-ready hangtags & size labelling",
+          ],
+          specs: {
+            Fabric: "Denim, Cotton Twill, Poplin, Flannel, Chambray",
+            GSM: "120 GSM - 340 GSM",
+            Wash: "Garment wash, Enzyme, Stone, Bleach",
+            Construction: "Woven, Plain weave, Twill",
+            MOQ: "300 pcs per style",
+            "Lead Time": "50-65 days from approved sample",
+            Sizes: "XS - 3XL",
+            Compliance: "AQL 2.5 pre-shipment inspection",
+          },
+          certs: [
+            "amfori BSCI",
+            "WRAP",
+            "Accord on Fire & Building Safety",
+            "Oeko-Tex Standard 100",
+          ],
+        },
+        sweater: {
+          label: "Sweater & Knitwear",
+          feats: [
+            "Cable, jacquard, intarsia & plated knit constructions",
+            "Wool, merino, lambswool, acrylic & cotton yarns",
+            "Crew neck, V-neck, turtleneck & cardigan styles",
+            "Fully-fashioned & cut-and-sewn panel construction",
+            "Hand-wash & machine-wash safe finishing",
+            "Custom yarn colour and gauge options",
+          ],
+          specs: {
+            Yarn: "Wool, Merino, Lambswool, Acrylic, Cotton",
+            Gauge: "5GG - 14GG",
+            Construction: "Fully-fashioned, Cut & Sewn",
+            Finish: "Hand-wash safe, Machine-wash safe",
+            MOQ: "200 pcs per style",
+            "Lead Time": "60-75 days from approved sample",
+            Sizes: "S - 3XL",
+            Packaging: "Flat-pack or hanger with polybag",
+          },
+          certs: [
+            "Oeko-Tex Standard 100",
+            "OCS (Organic Content Standard)",
+            "amfori BSCI",
+            "WRAP",
+          ],
+        },
+        handicraft: {
+          label: "Handicraft & Home Textile",
+          feats: [
+            "Natural fibres: water hyacinth, jute, seagrass, cotton",
+            "Hand-woven and hand-crafted artisan production",
+            "Iron, MDF, wood & glass structural elements",
+            "Eco-friendly dyes and sustainable materials",
+            "Custom sizing and bespoke colour options",
+            "Gift-ready and retail packaging available",
+          ],
+          specs: {
+            Materials:
+              "Water hyacinth, Jute, Seagrass, Cotton, Iron, MDF, Wood",
+            Process: "Hand-woven, Hand-crafted, Machine-assisted",
+            Finish: "Natural, Painted, Lacquered",
+            MOQ: "100 pcs per style",
+            "Lead Time": "40-55 days from approved sample",
+            Sizes: "As per design specification",
+            Packaging: "Carton, Gift box, Retail-ready",
+          },
+          certs: [
+            "amfori BSCI",
+            "Sedex (SMETA)",
+            "Accord on Fire & Building Safety",
+            "WRAP",
+          ],
+        },
+        activewear: {
+          label: "Activewear",
+          feats: [
+            "Moisture-wicking polyester & nylon fabrics",
+            "4-way stretch for unrestricted movement",
+            "Flat-lock stitching for comfort during sport",
+            "Full sublimation printing for custom branding",
+            "UV-protection & recycled polyester options",
+            "Performance-tested before bulk production",
+          ],
+          specs: {
+            Fabric: "Polyester-Spandex (90/10), Nylon-Spandex",
+            GSM: "160 GSM - 240 GSM",
+            Stretch: "4-way stretch",
+            Print: "Sublimation, Screen print, Heat transfer",
+            MOQ: "200 pcs per style",
+            "Lead Time": "45-60 days from approved sample",
+            Sizes: "XS - 3XL",
+            Compliance: "AQL 2.5 pre-shipment inspection",
+          },
+          certs: [
+            "Oeko-Tex Standard 100",
+            "amfori BSCI",
+            "ISO 9001",
+            "Accord on Fire & Building Safety",
+          ],
+        },
+        lingerie: {
+          label: "Lingerie & Nightwear",
+          feats: [
+            "Premium microfiber, modal, bamboo & cotton fabrics",
+            "Fine lace trim and delicate embroidery detail",
+            "Adjustable strapping and precision underwiring",
+            "Soft cup and structured bra construction",
+            "Multi-pack and gift-set configurations",
+            "Custom gift-box and retail packaging available",
+          ],
+          specs: {
+            Fabric: "Cotton, Microfiber, Modal, Bamboo viscose, Lace",
+            "Main Comps":
+              "Cups, Underwire, Straps, Lace trim, Elastic waistband",
+            Closure: "Hook-and-eye, Clasp, Drawstring, Elastic",
+            Sizing: "XS-XL (cup sizes A-E for bras)",
+            MOQ: "200 sets per style",
+            "Lead Time": "55-70 days from approved sample",
+            Pack: "Multipack 3-6 units or single retail",
+            Packaging: "Polybag, Hanger, Custom gift box",
+          },
+          certs: [
+            "WRAP",
+            "amfori BSCI",
+            "Accord on Fire & Building Safety",
+            "Oeko-Tex Standard 100",
+          ],
+        },
+      };
+
+      function qs(id) {
+        return document.getElementById(id);
+      }
+      function getParam() {
+        return new URLSearchParams(window.location.search).get("id") || "";
+      }
+
+      function setMain(el, src) {
+        qs("mainImg").src = src;
+        document
+          .querySelectorAll(".dg-thumb")
+          .forEach((t) => t.classList.remove("active"));
+        el.classList.add("active");
+      }
+
+      function switchTab(name, btn) {
+        document
+          .querySelectorAll(".tab-pane")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelectorAll(".det-tab")
+          .forEach((b) => b.classList.remove("active"));
+        qs("tab-" + name).classList.add("active");
+        btn.classList.add("active");
+      }
+
+      function copyLink() {
+        const btn = qs("copyBtn");
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          btn.classList.add("copied");
+          btn.innerHTML = '<i class="bi bi-check-lg"></i> Copied!';
+          setTimeout(() => {
+            btn.classList.remove("copied");
+            btn.innerHTML = '<i class="bi bi-link-45deg"></i> Copy Link';
+          }, 2200);
+        });
+      }
+
+      function buildGallery(p) {
+        const main = p.img,
+          imgs = [main];
+        const m = main.match(/\/1-(\d+)([-\w]*)\.jpg$/);
+        if (m)
+          imgs.push(
+            main.replace(/\/1-(\d+)([-\w]*)\.jpg$/, `/2-${m[1]}${m[2]}.jpg`),
+          );
+        while (imgs.length < 3) imgs.push(main);
+        return `<div class="detail-gallery">
+    <div class="dg-main-wrap">
+      <img id="mainImg" src="${main}" class="dg-main" alt="${p.name}" onerror="this.onerror=null"/>
+    </div>
+    <div class="dg-thumbs">
+      ${imgs
+        .map(
+          (
+            img,
+            i,
+          ) => `<img src="${img}" class="dg-thumb${i === 0 ? " active" : ""}" alt="View ${i + 1}"
+        onclick="setMain(this,'${img}')" loading="lazy" onerror="this.src='${main}';this.onerror=null"/>`,
+        )
+        .join("")}
+    </div>
+  </div>`;
+      }
+
+      function buildInfo(p) {
+        const meta = CAT_META[p.cat] || CAT_META.knit;
+        const badges = [
+          p.badge ? `<span class="prod-chip gold">${p.badge}</span>` : "",
+          '<span class="prod-chip dark">AQL Inspected</span>',
+          '<span class="prod-chip">Certified Factory</span>',
+          '<span class="prod-chip">Est. Since 2015</span>',
+        ]
+          .filter(Boolean)
+          .join("");
+        const tags = (p.tags || [])
+          .map((t) => `<span class="prod-tag-pill">${t}</span>`)
+          .join("");
+        const feats = meta.feats
+          .map(
+            (f) =>
+              `<div class="feat-item"><i class="bi bi-check-circle-fill feat-icon"></i><span class="feat-text">${f}</span></div>`,
+          )
+          .join("");
+        const specs = Object.entries(meta.specs)
+          .map(
+            ([k, v]) =>
+              `<div class="spec-row"><div class="spec-key">${k}</div><div class="spec-val">${v}</div></div>`,
+          )
+          .join("");
+        const certs = meta.certs
+          .map(
+            (c) =>
+              `<div class="cert-row"><i class="bi bi-patch-check-fill cert-icon"></i><span class="cert-lbl">${c}</span></div>`,
+          )
+          .join("");
+        return `
+    <div class="prod-cat-tag">${meta.label}</div>
+    <h1 class="prod-det-name">${p.name}</h1>
+    <div class="prod-price-pill"><i class="bi bi-telephone-fill"></i> Call for Price &mdash; Contact our sourcing team</div>
+    <div class="prod-badges">${badges}</div>
+    <p class="prod-desc">${p.desc}</p>
+    <div class="prod-tag-row">${tags}</div>
+    <div class="action-strip">
+      <button class="action-btn" id="copyBtn" onclick="copyLink()"><i class="bi bi-link-45deg"></i> Copy Link</button>
+      <a href="contact.html" class="action-btn"><i class="bi bi-envelope"></i> Request Sourcing</a>
+      <a href="products.html" class="action-btn"><i class="bi bi-grid-3x3-gap"></i> All Products</a>
+    </div>
+    <div class="det-tabs">
+      <button class="det-tab active" onclick="switchTab('features',this)">Features</button>
+      <button class="det-tab" onclick="switchTab('specs',this)">Specifications</button>
+      <button class="det-tab" onclick="switchTab('certs',this)">Certifications</button>
+    </div>
+    <div class="tab-pane active" id="tab-features"><div class="feat-grid">${feats}</div></div>
+    <div class="tab-pane" id="tab-specs">${specs}</div>
+    <div class="tab-pane" id="tab-certs">
+      <p style="color:var(--muted);font-size:.86rem;line-height:1.85;margin-bottom:14px;">All ENSA partner factories producing this category hold the following internationally recognised certifications:</p>
+      ${certs}
+    </div>
+    <div class="cta-box">
+      <div class="cta-box-title">Interested in this product?</div>
+      <p class="cta-box-text">Contact our sourcing team for pricing, samples and minimum order quantities. We typically respond within 24 hours.</p>
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="contact.html" class="btn-white-outline">Request Sourcing</a>
+        <a href="products.html" style="background:#fff;" class="btn-outline">View All Products</a>
+      </div>
+    </div>`;
+      }
+
+      function buildRelated(p) {
+        const meta = CAT_META[p.cat] || CAT_META.knit;
+        qs("relCatLabel").textContent = meta.label;
+        const pool = PRODUCTS.filter((x) => x.cat === p.cat && x.id !== p.id);
+        for (let i = pool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        const rel = pool.slice(0, 4);
+        if (!rel.length) {
+          qs("relatedGrid").innerHTML =
+            '<div class="col-12"><p style="color:var(--muted)">No other products in this category yet. <a href="products.html" style="color:var(--navy)">Browse all</a>.</p></div>';
+          return;
+        }
+        qs("relatedGrid").innerHTML = rel
+          .map(
+            (r) => `
+    <div class="col-sm-6 col-lg-3 rel-col">
+      <a href="product-detail.html?id=${r.id}" class="rel-card">
+        <div class="rel-img-wrap"><img src="${r.img}" class="rel-img" alt="${r.name}" loading="lazy" onerror="this.parentElement.style.background='var(--bg-alt)';this.remove()"/></div>
+        <div class="rel-body">
+          <div class="rel-cat">${r.sub}</div>
+          <div class="rel-name">${r.name}</div>
+          <div class="rel-tags">${(r.tags || []).slice(0, 2).join(" &middot; ")}</div>
+          <div class="rel-link">View Details <i class="bi bi-arrow-right"></i></div>
+        </div>
+      </a>
+    </div>`,
+          )
+          .join("");
+      }
+
+      function load() {
+        const id = getParam();
+        // First try exact product id match
+        let product = PRODUCTS.find((p) => p.id === id);
+        // If not found, try treating id as a category name (e.g. ?id=knit from nav links)
+        if (!product && id) {
+          product = PRODUCTS.find((p) => p.cat === id);
+        }
+        // Final fallback: first product in array
+        if (!product) {
+          product = PRODUCTS[0];
+        }
+        document.title = product.name + " — ENSA Clothing Ltd.";
+        qs("bcCat").textContent = product.sub || product.cat;
+        qs("bcName").textContent = product.name;
+        qs("detailRow").innerHTML =
+          `<div class="col-lg-6 det-fade">${buildGallery(product)}</div><div class="col-lg-6 det-fade" style="animation-delay:.12s">${buildInfo(product)}</div>`;
+        buildRelated(product);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      load();
+    </script>
+  </body>
+</html>
